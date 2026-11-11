@@ -1,0 +1,35 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="900">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Бумажные сделки</title><style>
+:root{--bg:#f4f4f1;--card:#fff;--fg:#18181b;--mut:#71717a;--line:#e4e4e7;--pos:#15803d;--neg:#b91c1c;--head:#fafafa}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--card:#1a1a1d;--fg:#ececee;--mut:#8b8b93;--line:#2a2a2f;--pos:#4ade80;--neg:#f87171;--head:#1f1f23}}
+body{margin:0;padding:20px;background:var(--bg);color:var(--fg);font:14px/1.4 "Segoe UI",system-ui,sans-serif}h1{margin:0;font-size:22px}h2{font-size:16px;margin:22px 0 8px}
+.mut{color:var(--mut)}a{color:inherit}.wrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:auto;max-height:70vh}
+table{border-collapse:separate;border-spacing:0;width:100%}th{position:sticky;top:0;background:var(--head);text-align:left;font-size:12px;color:var(--mut);padding:10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th.n{text-align:right}td{padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}.n{text-align:right;font-variant-numeric:tabular-nums}
+.sub{font-size:11px}.pos{color:var(--pos)}.neg{color:var(--neg)}.note{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:14px 0}
+.legend{margin-top:14px;font-size:12px;color:var(--mut);line-height:1.6}.legend b{color:var(--fg)}
+
+nav.top{display:flex;gap:6px;align-items:center;margin:0 0 14px;flex-wrap:wrap}
+nav.top a{text-decoration:none;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:13px}
+nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;border-color:var(--mut)}
+nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="anomalies.html" class="">Аномалии рынка</a><a href="paper.html" class="on">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="upd">обновлено 2026-11-11 20:00</span></nav>
+<h1>Бумажные сделки — проверка модели</h1>
+<div class="mut">Последний замер: <b>2026-11-11 20:00</b> · виртуальных покупок: 54</div>
+<div class="note">Пока ни одна сделка не прошла 7 дней лока. Первые результаты появятся <b>17.11, 21:09</b>. До этого сделки просто копятся.</div>
+<h2>Итог по группам</h2>
+<div class="wrap"><table><thead><tr><th>Группа</th><th class="n">Открыто</th><th class="n">В локе</th><th class="n">Прошли лок</th>
+<th class="n">Прогноз</th><th class="n">Факт после лока</th><th class="n">Ошибка прогноза</th><th class="n">В плюсе</th><th class="n">Худшая</th><th class="n">Лучший момент дни 7–10</th></tr></thead>
+<tbody><tr><td><b>Кандидат</b></td><td class="n">3</td><td class="n">3</td><td class="n">0</td>
+<td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td>
+<td class="n">—</td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td></tr><tr><td><b>На заметке</b></td><td class="n">10</td><td class="n">10</td><td class="n">0</td>
+<td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td>
+<td class="n">—</td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td></tr><tr><td><b>Не подходит (контроль)</b></td><td class="n">41</td><td class="n">41</td><td class="n">0</td>
+<td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td>
+<td class="n">—</td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td></tr></tbody></table></div>
+<h2>Сделки, прошедшие лок</h2>
+<p class="mut">Пока нет.</p>
+<div class="legend"><b>Как работает.</b> Каждый час по каждому скину из таблицы (не чаще раза в сутки на скин) записывается виртуальная покупка на Lis-skins по текущей цене.
+Через 7 дней (конец лока) берётся реальная цена выхода на MC и считается фактический профит после всех комиссий; ещё 3 дня отслеживается лучший момент для продажи.
+<b>Контроль</b> — скины без сигнала: если «Кандидаты» не лучше контроля, сигнал ничего не стоит.
+<b>Ошибка прогноза</b> — насколько факт отличается от обещанного: если она около −5% и хуже, модель переоценивает прибыль и порог надо поднимать.</div>
+</body></html>
