@@ -21,7 +21,7 @@ nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
 .timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
 .timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
 .timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body>
-<nav class="top"><a href="table.html" class="">Таблица</a><a href="anomalies.html" class="">Аномалии рынка</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="on">Время продажи</a><span class="timer" id="tmr" data-last="1794425400000" data-step="10"><i class="dot"></i><span id="tmr-t">…</span></span>
+<nav class="top"><a href="table.html" class="">Таблица</a><a href="anomalies.html" class="">Аномалии рынка</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="on">Время продажи</a><span class="timer" id="tmr" data-last="1794425880000" data-step="10"><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=+el.dataset.step*6e4,LAG=3*6e4;
 const next=last+step;
@@ -39,7 +39,7 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.innerHTML='Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>РљРѕРіРґР° РІС‹РіРѕРґРЅРµРµ РїСЂРѕРґР°РІР°С‚СЊ РЅР° Market.CSGO</h1>
-<div class="mut">РџРѕСЃР»РµРґРЅРёР№ Р·Р°РјРµСЂ: <b>2026-11-11 20:30</b> В· РІСЃРµРіРѕ Р·Р°РјРµСЂРѕРІ: 53 В· СЃРєРёРЅРѕРІ: 54 В· РІСЂРµРјСЏ вЂ” РїРѕ С‡Р°СЃР°Рј С‚РІРѕРµРіРѕ РєРѕРјРїСЊСЋС‚РµСЂР°</div>
+<div class="mut">РџРѕСЃР»РµРґРЅРёР№ Р·Р°РјРµСЂ: <b>2026-11-11 20:38</b> В· РІСЃРµРіРѕ Р·Р°РјРµСЂРѕРІ: 54 В· СЃРєРёРЅРѕРІ: 54 В· РІСЂРµРјСЏ вЂ” РїРѕ С‡Р°СЃР°Рј С‚РІРѕРµРіРѕ РєРѕРјРїСЊСЋС‚РµСЂР°</div>
 <h2>РџРѕ СЂРµР°Р»СЊРЅС‹Рј РїСЂРѕРґР°Р¶Р°Рј РЅР° Market.CSGO</h2>
 <div class="card"><p class="big">РџСЂРѕРґР°РІР°С‚СЊ РІС‹РіРѕРґРЅРµРµ РІСЃРµРіРѕ РІРµС‡РµСЂРѕРј: РѕРєРѕР»Рѕ <b class="pos">18:00, 19:00, 20:00, 21:00</b> вЂ” РІ СЌС‚Рё С‡Р°СЃС‹ СЃРґРµР»РєРё РїСЂРѕС…РѕРґСЏС‚ Р±Р»РёР¶Рµ РІСЃРµРіРѕ Рє РґРЅРµРІРЅРѕР№ С†РµРЅРµ, Рё РїРѕРєСѓРїР°С‚РµР»РµР№ Р±РѕР»СЊС€Рµ РІСЃРµРіРѕ (РїРёРє РїСЂРѕРґР°Р¶ РѕРєРѕР»Рѕ 17:00, 18:00, 19:00, 20:00).
 РҐСѓР¶Рµ РІСЃРµРіРѕ РЅРѕС‡СЊСЋ, РѕРєРѕР»Рѕ <b class="neg">04:00, 05:00, 06:00</b>: РїСЂРѕРґР°Р¶ РјР°Р»Рѕ, Рё РїСЂРѕС…РѕРґСЏС‚ РѕРЅРё РІ СЃСЂРµРґРЅРµРј РЅР° 1,5% РґРµС€РµРІР»Рµ.</p>
@@ -102,77 +102,77 @@ tick();setInterval(tick,1000)})();</script></nav>
 <h2>РџРѕ С‡Р°СЃР°Рј СЃСѓС‚РѕРє</h2>
 <div class="wrap"><table><thead><tr><th>Р§Р°СЃ</th><th class="v">Р¦РµРЅР° РЅР° MC</th><th></th><th class="v">Р›РѕС‚РѕРІ РЅР° MC</th><th></th><th class="n">Р—Р°РјРµСЂРѕРІ / РґРЅРµР№</th><th>Р§С‚Рѕ СЌС‚Рѕ Р·РЅР°С‡РёС‚</th></tr></thead>
 <tbody><tr class="weak"><td><b>00:00</b></td>
-<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.7%;right:50%"></i></div></td>
-<td class="v">в€’9,9%</td><td class="bc"><div class="bar"><i class="g" style="width:4.9%;right:50%"></i></div></td>
+<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.6%;right:50%"></i></div></td>
+<td class="v">в€’9,7%</td><td class="bc"><div class="bar"><i class="g" style="width:4.9%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>01:00</b></td>
-<td class="v">в€’0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:9.9%;right:50%"></i></div></td>
-<td class="v">в€’3,6%</td><td class="bc"><div class="bar"><i class="g" style="width:1.8%;right:50%"></i></div></td>
+<td class="v">в€’0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:10.9%;right:50%"></i></div></td>
+<td class="v">в€’3,4%</td><td class="bc"><div class="bar"><i class="g" style="width:1.7%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>02:00</b></td>
-<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:13.4%;right:50%"></i></div></td>
-<td class="v">в€’2,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.0%;right:50%"></i></div></td>
+<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:14.5%;right:50%"></i></div></td>
+<td class="v">в€’1,8%</td><td class="bc"><div class="bar"><i class="g" style="width:0.9%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>03:00</b></td>
-<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:13.1%;right:50%"></i></div></td>
-<td class="v">+0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:0.1%;left:50%"></i></div></td>
-<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>04:00</b></td>
 <td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:14.1%;right:50%"></i></div></td>
-<td class="v">в€’0,8%</td><td class="bc"><div class="bar"><i class="g" style="width:0.4%;right:50%"></i></div></td>
+<td class="v">+0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:0.2%;left:50%"></i></div></td>
+<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>04:00</b></td>
+<td class="v">в€’0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:15.2%;right:50%"></i></div></td>
+<td class="v">в€’0,6%</td><td class="bc"><div class="bar"><i class="g" style="width:0.3%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>05:00</b></td>
-<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:11.8%;right:50%"></i></div></td>
-<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:0.1%;left:50%"></i></div></td>
+<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:12.8%;right:50%"></i></div></td>
+<td class="v">+0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:0.2%;left:50%"></i></div></td>
 <td class="n">3 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>06:00</b></td>
-<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:13.9%;right:50%"></i></div></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="r" style="width:0.0%;left:50%"></i></div></td>
+<td class="v">в€’0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:14.9%;right:50%"></i></div></td>
+<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:0.1%;left:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>07:00</b></td>
-<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.8%;right:50%"></i></div></td>
-<td class="v">+1,9%</td><td class="bc"><div class="bar"><i class="r" style="width:1.0%;left:50%"></i></div></td>
+<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.7%;right:50%"></i></div></td>
+<td class="v">+2,1%</td><td class="bc"><div class="bar"><i class="r" style="width:1.0%;left:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>08:00</b></td>
-<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:5.3%;right:50%"></i></div></td>
-<td class="v">+0,7%</td><td class="bc"><div class="bar"><i class="r" style="width:0.4%;left:50%"></i></div></td>
+<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.2%;right:50%"></i></div></td>
+<td class="v">+0,9%</td><td class="bc"><div class="bar"><i class="r" style="width:0.4%;left:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>09:00</b></td>
-<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="g" style="width:1.9%;left:50%"></i></div></td>
-<td class="v">+1,0%</td><td class="bc"><div class="bar"><i class="r" style="width:0.5%;left:50%"></i></div></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.2%;left:50%"></i></div></td>
+<td class="v">+1,1%</td><td class="bc"><div class="bar"><i class="r" style="width:0.6%;left:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>10:00</b></td>
-<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:6.4%;left:50%"></i></div></td>
-<td class="v">в€’1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:0.8%;right:50%"></i></div></td>
+<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:5.7%;left:50%"></i></div></td>
+<td class="v">в€’1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:0.7%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>11:00</b></td>
-<td class="v">в€’0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:3.4%;right:50%"></i></div></td>
-<td class="v">+0,6%</td><td class="bc"><div class="bar"><i class="r" style="width:0.3%;left:50%"></i></div></td>
+<td class="v">в€’0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:4.3%;right:50%"></i></div></td>
+<td class="v">+0,8%</td><td class="bc"><div class="bar"><i class="r" style="width:0.4%;left:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>12:00</b></td>
-<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:4.8%;left:50%"></i></div></td>
+<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="g" style="width:4.1%;left:50%"></i></div></td>
 <td class="v">в€’100,0%</td><td class="bc"><div class="bar"><i class="g" style="width:50.0%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>13:00</b></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.0%;left:50%"></i></div></td>
-<td class="v">в€’52,2%</td><td class="bc"><div class="bar"><i class="g" style="width:26.1%;right:50%"></i></div></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:0.2%;left:50%"></i></div></td>
+<td class="v">в€’52,1%</td><td class="bc"><div class="bar"><i class="g" style="width:26.1%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>14:00</b></td>
-<td class="v">в€’0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:9.9%;right:50%"></i></div></td>
-<td class="v">в€’4,8%</td><td class="bc"><div class="bar"><i class="g" style="width:2.4%;right:50%"></i></div></td>
+<td class="v">в€’0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:10.8%;right:50%"></i></div></td>
+<td class="v">в€’4,6%</td><td class="bc"><div class="bar"><i class="g" style="width:2.3%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>15:00</b></td>
-<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.2%;right:50%"></i></div></td>
-<td class="v">в€’1,3%</td><td class="bc"><div class="bar"><i class="g" style="width:0.7%;right:50%"></i></div></td>
-<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>16:00</b></td>
-<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:50.0%;left:50%"></i></div></td>
-<td class="v">+3,1%</td><td class="bc"><div class="bar"><i class="r" style="width:1.6%;left:50%"></i></div></td>
-<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>17:00</b></td>
 <td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.1%;right:50%"></i></div></td>
-<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="g" style="width:0.2%;right:50%"></i></div></td>
-<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>18:00</b></td>
-<td class="v">в€’0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:2.1%;right:50%"></i></div></td>
-<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:0.0%;left:50%"></i></div></td>
-<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>19:00</b></td>
-<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:5.2%;right:50%"></i></div></td>
-<td class="v">+0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:0.3%;left:50%"></i></div></td>
-<td class="n">1 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>20:00</b></td>
-<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.4%;right:50%"></i></div></td>
+<td class="v">в€’1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:0.6%;right:50%"></i></div></td>
+<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>16:00</b></td>
+<td class="v">+1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:50.0%;left:50%"></i></div></td>
+<td class="v">+3,3%</td><td class="bc"><div class="bar"><i class="r" style="width:1.6%;left:50%"></i></div></td>
+<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>17:00</b></td>
+<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:8.0%;right:50%"></i></div></td>
 <td class="v">в€’0,3%</td><td class="bc"><div class="bar"><i class="g" style="width:0.1%;right:50%"></i></div></td>
-<td class="n">5 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>21:00</b></td>
-<td class="v">+0,3%</td><td class="bc"><div class="bar"><i class="g" style="width:9.7%;left:50%"></i></div></td>
-<td class="v">в€’0,5%</td><td class="bc"><div class="bar"><i class="g" style="width:0.3%;right:50%"></i></div></td>
+<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>18:00</b></td>
+<td class="v">в€’0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:2.9%;right:50%"></i></div></td>
+<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:0.1%;left:50%"></i></div></td>
+<td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>19:00</b></td>
+<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.1%;right:50%"></i></div></td>
+<td class="v">+0,7%</td><td class="bc"><div class="bar"><i class="r" style="width:0.3%;left:50%"></i></div></td>
+<td class="n">1 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>20:00</b></td>
+<td class="v">в€’0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:5.9%;right:50%"></i></div></td>
+<td class="v">в€’0,7%</td><td class="bc"><div class="bar"><i class="g" style="width:0.4%;right:50%"></i></div></td>
+<td class="n">6 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>21:00</b></td>
+<td class="v">+0,3%</td><td class="bc"><div class="bar"><i class="g" style="width:9.0%;left:50%"></i></div></td>
+<td class="v">в€’0,4%</td><td class="bc"><div class="bar"><i class="g" style="width:0.2%;right:50%"></i></div></td>
 <td class="n">1 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>22:00</b></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="r" style="width:0.8%;right:50%"></i></div></td>
-<td class="v">в€’0,9%</td><td class="bc"><div class="bar"><i class="g" style="width:0.4%;right:50%"></i></div></td>
+<td class="v">в€’0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:1.6%;right:50%"></i></div></td>
+<td class="v">в€’0,7%</td><td class="bc"><div class="bar"><i class="g" style="width:0.4%;right:50%"></i></div></td>
 <td class="n">5 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>23:00</b></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="r" style="width:0.6%;right:50%"></i></div></td>
-<td class="v">в€’1,7%</td><td class="bc"><div class="bar"><i class="g" style="width:0.9%;right:50%"></i></div></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="r" style="width:1.4%;right:50%"></i></div></td>
+<td class="v">в€’1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:0.8%;right:50%"></i></div></td>
 <td class="n">2 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 3 РґРЅСЏ</span></td></tr></tbody></table></div>
 
 <h2>РџРѕ РґРЅСЏРј РЅРµРґРµР»Рё</h2>
@@ -181,12 +181,12 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="v">вЂ”</td><td class="bc"><div class="bar"></div></td>
 <td class="v">вЂ”</td><td class="bc"><div class="bar"></div></td>
 <td class="n">0 / 0 РґРЅРµР№</td><td><span class="dim">РЅРµС‚ Р·Р°РјРµСЂРѕРІ</span></td></tr><tr class="weak"><td><b>РІС‚РѕСЂРЅРёРє</b></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:0.5%;left:50%"></i></div></td>
-<td class="v">в€’1,1%</td><td class="bc"><div class="bar"><i class="g" style="width:0.5%;right:50%"></i></div></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="r" style="width:0.2%;right:50%"></i></div></td>
+<td class="v">в€’0,9%</td><td class="bc"><div class="bar"><i class="g" style="width:0.4%;right:50%"></i></div></td>
 <td class="n">8 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 2 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>СЃСЂРµРґР°</b></td>
-<td class="v">в€’0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:3.9%;right:50%"></i></div></td>
-<td class="v">в€’7,6%</td><td class="bc"><div class="bar"><i class="g" style="width:3.8%;right:50%"></i></div></td>
-<td class="n">45 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 2 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>С‡РµС‚РІРµСЂРі</b></td>
+<td class="v">в€’0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:4.5%;right:50%"></i></div></td>
+<td class="v">в€’7,4%</td><td class="bc"><div class="bar"><i class="g" style="width:3.7%;right:50%"></i></div></td>
+<td class="n">46 / 1 РґРµРЅСЊ</td><td><span class="dim">РјР°Р»Рѕ РґР°РЅРЅС‹С…: 1 РёР· 2 РґРЅСЏ</span></td></tr><tr class="weak"><td><b>С‡РµС‚РІРµСЂРі</b></td>
 <td class="v">вЂ”</td><td class="bc"><div class="bar"></div></td>
 <td class="v">вЂ”</td><td class="bc"><div class="bar"></div></td>
 <td class="n">0 / 0 РґРЅРµР№</td><td><span class="dim">РЅРµС‚ Р·Р°РјРµСЂРѕРІ</span></td></tr><tr class="weak"><td><b>РїСЏС‚РЅРёС†Р°</b></td>
