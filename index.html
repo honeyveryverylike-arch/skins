@@ -1,5 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="600">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>Скины → Market.CSGO</title><style>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Скины → Market.CSGO</title><style>
 :root{--bg:#f4f4f1;--card:#fff;--fg:#18181b;--mut:#71717a;--line:#e4e4e7;--pos:#15803d;--neg:#b91c1c;--midc:#a16207;
 --buy:#dcfce7;--buyf:#166534;--watch:#fef3c7;--watchf:#92400e;--no:#f1f1f1;--nof:#71717a;--head:#fafafa;
 --c1:#2563eb;--c2:#7c3aed;--c3:#16a34a;--c4:#ea580c}
@@ -58,10 +57,29 @@ tr.flash td{animation:flash 1.6s ease-out}@keyframes flash{0%{background:color-m
 nav.top{display:flex;gap:6px;align-items:center;margin:0 0 14px;flex-wrap:wrap}
 nav.top a{text-decoration:none;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:13px}
 nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;border-color:var(--mut)}
-nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}</style></head><body>
-<nav class="top"><a href="table.html" class="on">Таблица</a><a href="anomalies.html" class="">Аномалии рынка</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a></nav>
+nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
+.timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
+.timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
+.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body>
+<nav class="top"><a href="table.html" class="on">Таблица</a><a href="anomalies.html" class="">Аномалии рынка</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1794423600000" data-step="15"><i class="dot"></i><span id="tmr-t">…</span></span>
+<script>(function(){
+const el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=+el.dataset.step*6e4,LAG=3*6e4;
+const next=last+step;
+const hm=t=>new Date(t).toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});
+const mmss=ms=>{ms=Math.max(0,ms);const m=Math.floor(ms/6e4),s=Math.floor(ms%6e4/1e3);return m+':'+String(s).padStart(2,'0')};
+let checking=false,lastCheck=0;
+async function check(){if(checking||Date.now()-lastCheck<6e4)return;checking=true;lastCheck=Date.now();
+ try{if(location.protocol==='file:'){location.reload();return}
+  const r=await fetch(location.pathname+'?t='+Date.now(),{cache:'no-store'}),h=await r.text(),m=h.match(/data-last="(\d+)"/);
+  if(m&&+m[1]>last){location.replace(location.pathname+'?t='+Date.now());return}}catch(e){}
+ checking=false}
+function tick(){const now=Date.now(),due=next+LAG;
+ if(now<next){el.className='timer';tx.innerHTML='Следующее обновление цен через <b>'+mmss(next-now)+'</b> · в '+hm(next)}
+ else if(now<due+12*6e4){el.className='timer wait';tx.innerHTML='Идёт замер цен, страница обновится сама (замер в '+hm(next)+')';if(now>=due)check()}
+ else{el.className='timer late';tx.innerHTML='Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
+tick();setInterval(tick,1000)})();</script></nav>
 <h1>Скины: покупка → продажа на Market.CSGO</h1>
-<div class="mut">Последний замер: <b>2026-11-11 20:00</b> · всего замеров: 49 · курс MC 86.90 ₽ за $ · страница обновляется сама каждые 10 минут, фильтры и открытые графики сохраняются</div>
+<div class="mut">Последний замер: <b>2026-11-11 20:00</b> · всего замеров: 49 · курс MC 86.90 ₽ за $ · страница обновляется сама после каждого замера, фильтры и открытые графики сохраняются</div>
 <div class="cards"><div class="card"><div class="k">Кандидаты на покупку</div><div class="v pos">5</div><div class="s">профит ≥5%, очередь ≤4 дн, маржа больше размаха, без падения</div></div><div class="card"><div class="k">Наблюдать</div><div class="v midc">5</div><div class="s">профит от 3% или не прошёл один из рисков</div></div><div class="card"><div class="k">Лучший сейчас</div><div class="v ">+8.1%</div><div class="s">M4A1-S | Party Animal (Battle-Scarred)</div></div><div class="card"><div class="k">Корзина на $50</div><div class="v ">$47.93 <span class="vs">→ <span class="pos">+320 ₽</span></span></div><div class="s">4 × M4A1-S Party Animal, 13 × AK-47 Midnight Laminate. Предварительно — ждём итогов теста</div></div><a href="anomalies.html" class="card link"><div class="k">Аномалии рынка</div><div class="v ">35 <span class="vs">рост · 1 падение</span></div><div class="s">проверено 972 скинов, раз в 3 ч</div></a><a href="paper.html" class="card link"><div class="k">Бумажные сделки</div><div class="v ">54 <span class="vs">в работе</span></div><div class="s">первые итоги 17.11 21:09</div></a></div>
 <div class="bar"><input type="search" id="q" placeholder="Поиск: ak, glock, awp…" aria-label="Поиск скина">
 <div class="seg" role="group" aria-label="Фильтр"><button data-f="all" class="on">Все (47)</button><button data-f="buy">Кандидаты (5)</button><button data-f="watch">Наблюдать (5)</button><button data-f="chg" title="Сигнал поменялся с прошлого замера">Изменились (4)</button></div>

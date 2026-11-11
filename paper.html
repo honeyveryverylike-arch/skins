@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="900">
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Бумажные сделки</title><style>
 :root{--bg:#f4f4f1;--card:#fff;--fg:#18181b;--mut:#71717a;--line:#e4e4e7;--pos:#15803d;--neg:#b91c1c;--head:#fafafa}
 @media (prefers-color-scheme:dark){:root{--bg:#111113;--card:#1a1a1d;--fg:#ececee;--mut:#8b8b93;--line:#2a2a2f;--pos:#4ade80;--neg:#f87171;--head:#1f1f23}}
@@ -12,7 +12,26 @@ th.n{text-align:right}td{padding:8px 10px;border-bottom:1px solid var(--line);wh
 nav.top{display:flex;gap:6px;align-items:center;margin:0 0 14px;flex-wrap:wrap}
 nav.top a{text-decoration:none;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:13px}
 nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;border-color:var(--mut)}
-nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="anomalies.html" class="">Аномалии рынка</a><a href="paper.html" class="on">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="upd">обновлено 2026-11-11 20:00</span></nav>
+nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
+.timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
+.timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
+.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="anomalies.html" class="">Аномалии рынка</a><a href="paper.html" class="on">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1794423600000" data-step="15"><i class="dot"></i><span id="tmr-t">…</span></span>
+<script>(function(){
+const el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=+el.dataset.step*6e4,LAG=3*6e4;
+const next=last+step;
+const hm=t=>new Date(t).toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});
+const mmss=ms=>{ms=Math.max(0,ms);const m=Math.floor(ms/6e4),s=Math.floor(ms%6e4/1e3);return m+':'+String(s).padStart(2,'0')};
+let checking=false,lastCheck=0;
+async function check(){if(checking||Date.now()-lastCheck<6e4)return;checking=true;lastCheck=Date.now();
+ try{if(location.protocol==='file:'){location.reload();return}
+  const r=await fetch(location.pathname+'?t='+Date.now(),{cache:'no-store'}),h=await r.text(),m=h.match(/data-last="(\d+)"/);
+  if(m&&+m[1]>last){location.replace(location.pathname+'?t='+Date.now());return}}catch(e){}
+ checking=false}
+function tick(){const now=Date.now(),due=next+LAG;
+ if(now<next){el.className='timer';tx.innerHTML='Следующее обновление цен через <b>'+mmss(next-now)+'</b> · в '+hm(next)}
+ else if(now<due+12*6e4){el.className='timer wait';tx.innerHTML='Идёт замер цен, страница обновится сама (замер в '+hm(next)+')';if(now>=due)check()}
+ else{el.className='timer late';tx.innerHTML='Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
+tick();setInterval(tick,1000)})();</script></nav>
 <h1>Бумажные сделки — проверка модели</h1>
 <div class="mut">Последний замер: <b>2026-11-11 20:00</b> · виртуальных покупок: 54</div>
 <div class="note">Пока ни одна сделка не прошла 7 дней лока. Первые результаты появятся <b>17.11, 21:09</b>. До этого сделки просто копятся.</div>
