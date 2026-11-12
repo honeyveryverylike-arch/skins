@@ -21,7 +21,7 @@ nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
 .timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
 .timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
 .timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body>
-<nav class="top"><a href="table.html" class="">Таблица</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="on">Время продажи</a><span class="timer" id="tmr" data-last="1794444540000" data-step="10"><i class="dot"></i><span id="tmr-t">…</span></span>
+<nav class="top"><a href="table.html" class="">Таблица</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="on">Время продажи</a><span class="timer" id="tmr" data-last="1794445140000" data-step="10"><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=+el.dataset.step*6e4,LAG=3*6e4;
 const next=last+step;
@@ -39,7 +39,7 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.innerHTML='Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Когда выгоднее продавать на Market.CSGO</h1>
-<div class="mut">Последний замер: <b>2026-11-12 01:49</b> · всего замеров: 85 · скинов: 193 · время — по часам твоего компьютера</div>
+<div class="mut">Последний замер: <b>2026-11-12 01:59</b> · всего замеров: 86 · скинов: 193 · время — по часам твоего компьютера</div>
 <h2>По реальным продажам на Market.CSGO</h2>
 <div class="card"><p class="big">Продавать выгоднее всего вечером: около <b class="pos">18:00, 19:00, 20:00, 21:00</b> — в эти часы сделки проходят ближе всего к дневной цене, и покупателей больше всего (пик продаж около 17:00, 18:00, 19:00, 20:00).
 Хуже всего ночью, около <b class="neg">04:00, 05:00, 06:00</b>: продаж мало, и проходят они в среднем на 1,5% дешевле.</p>
@@ -102,77 +102,77 @@ tick();setInterval(tick,1000)})();</script></nav>
 <h2>По часам суток</h2>
 <div class="wrap"><table><thead><tr><th>Час</th><th class="v">Цена на MC</th><th></th><th class="v">Лотов на MC</th><th></th><th class="n">Замеров / дней</th><th>Что это значит</th></tr></thead>
 <tbody><tr class="weak"><td><b>00:00</b></td>
-<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:5.7%;left:50%"></i></div></td>
-<td class="v">−5,0%</td><td class="bc"><div class="bar"><i class="g" style="width:2.5%;right:50%"></i></div></td>
+<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:6.3%;left:50%"></i></div></td>
+<td class="v">−4,6%</td><td class="bc"><div class="bar"><i class="g" style="width:2.3%;right:50%"></i></div></td>
 <td class="n">8 / 2 дня</td><td><span class="dim">мало данных: 2 из 3 дня</span></td></tr><tr class="weak"><td><b>01:00</b></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.1%;right:50%"></i></div></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:0.1%;right:50%"></i></div></td>
-<td class="n">6 / 2 дня</td><td><span class="dim">мало данных: 2 из 3 дня</span></td></tr><tr class="weak"><td><b>02:00</b></td>
-<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:14.8%;right:50%"></i></div></td>
-<td class="v">+2,9%</td><td class="bc"><div class="bar"><i class="r" style="width:1.5%;left:50%"></i></div></td>
+<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.4%;right:50%"></i></div></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="r" style="width:0.0%;left:50%"></i></div></td>
+<td class="n">7 / 2 дня</td><td><span class="dim">мало данных: 2 из 3 дня</span></td></tr><tr class="weak"><td><b>02:00</b></td>
+<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:15.4%;right:50%"></i></div></td>
+<td class="v">+3,4%</td><td class="bc"><div class="bar"><i class="r" style="width:1.7%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>03:00</b></td>
-<td class="v">−0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:14.4%;right:50%"></i></div></td>
-<td class="v">+5,2%</td><td class="bc"><div class="bar"><i class="r" style="width:2.6%;left:50%"></i></div></td>
+<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:15.0%;right:50%"></i></div></td>
+<td class="v">+5,7%</td><td class="bc"><div class="bar"><i class="r" style="width:2.8%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>04:00</b></td>
-<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:15.5%;right:50%"></i></div></td>
-<td class="v">+4,0%</td><td class="bc"><div class="bar"><i class="r" style="width:2.0%;left:50%"></i></div></td>
+<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:16.1%;right:50%"></i></div></td>
+<td class="v">+4,5%</td><td class="bc"><div class="bar"><i class="r" style="width:2.2%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>05:00</b></td>
-<td class="v">−0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:13.1%;right:50%"></i></div></td>
-<td class="v">+5,2%</td><td class="bc"><div class="bar"><i class="r" style="width:2.6%;left:50%"></i></div></td>
+<td class="v">−0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:13.6%;right:50%"></i></div></td>
+<td class="v">+5,7%</td><td class="bc"><div class="bar"><i class="r" style="width:2.9%;left:50%"></i></div></td>
 <td class="n">3 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>06:00</b></td>
-<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:15.1%;right:50%"></i></div></td>
-<td class="v">+4,9%</td><td class="bc"><div class="bar"><i class="r" style="width:2.4%;left:50%"></i></div></td>
-<td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>07:00</b></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.7%;right:50%"></i></div></td>
-<td class="v">+6,7%</td><td class="bc"><div class="bar"><i class="r" style="width:3.3%;left:50%"></i></div></td>
-<td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>08:00</b></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.3%;right:50%"></i></div></td>
-<td class="v">+5,2%</td><td class="bc"><div class="bar"><i class="r" style="width:2.6%;left:50%"></i></div></td>
-<td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>09:00</b></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.1%;left:50%"></i></div></td>
+<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="r" style="width:15.6%;right:50%"></i></div></td>
 <td class="v">+5,4%</td><td class="bc"><div class="bar"><i class="r" style="width:2.7%;left:50%"></i></div></td>
+<td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>07:00</b></td>
+<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:8.2%;right:50%"></i></div></td>
+<td class="v">+7,1%</td><td class="bc"><div class="bar"><i class="r" style="width:3.6%;left:50%"></i></div></td>
+<td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>08:00</b></td>
+<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.8%;right:50%"></i></div></td>
+<td class="v">+5,7%</td><td class="bc"><div class="bar"><i class="r" style="width:2.9%;left:50%"></i></div></td>
+<td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>09:00</b></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:0.7%;left:50%"></i></div></td>
+<td class="v">+5,9%</td><td class="bc"><div class="bar"><i class="r" style="width:3.0%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>10:00</b></td>
-<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:5.7%;left:50%"></i></div></td>
-<td class="v">+2,5%</td><td class="bc"><div class="bar"><i class="r" style="width:1.2%;left:50%"></i></div></td>
+<td class="v">+0,2%</td><td class="bc"><div class="bar"><i class="g" style="width:5.4%;left:50%"></i></div></td>
+<td class="v">+2,9%</td><td class="bc"><div class="bar"><i class="r" style="width:1.5%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>11:00</b></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.5%;right:50%"></i></div></td>
-<td class="v">+2,0%</td><td class="bc"><div class="bar"><i class="r" style="width:1.0%;left:50%"></i></div></td>
+<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.0%;right:50%"></i></div></td>
+<td class="v">+2,4%</td><td class="bc"><div class="bar"><i class="r" style="width:1.2%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>12:00</b></td>
-<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="g" style="width:2.0%;left:50%"></i></div></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.6%;left:50%"></i></div></td>
 <td class="v">−100,0%</td><td class="bc"><div class="bar"><i class="g" style="width:50.0%;right:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>13:00</b></td>
-<td class="v">−0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:2.0%;right:50%"></i></div></td>
-<td class="v">−50,9%</td><td class="bc"><div class="bar"><i class="g" style="width:25.4%;right:50%"></i></div></td>
+<td class="v">−0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:2.4%;right:50%"></i></div></td>
+<td class="v">−50,7%</td><td class="bc"><div class="bar"><i class="g" style="width:25.3%;right:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>14:00</b></td>
-<td class="v">−0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:13.4%;right:50%"></i></div></td>
-<td class="v">−2,1%</td><td class="bc"><div class="bar"><i class="g" style="width:1.0%;right:50%"></i></div></td>
+<td class="v">−0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:13.9%;right:50%"></i></div></td>
+<td class="v">−1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:0.8%;right:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>15:00</b></td>
-<td class="v">−0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:8.7%;right:50%"></i></div></td>
-<td class="v">+2,4%</td><td class="bc"><div class="bar"><i class="r" style="width:1.2%;left:50%"></i></div></td>
+<td class="v">−0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:9.2%;right:50%"></i></div></td>
+<td class="v">+2,9%</td><td class="bc"><div class="bar"><i class="r" style="width:1.4%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>16:00</b></td>
 <td class="v">+1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:50.0%;left:50%"></i></div></td>
-<td class="v">+6,9%</td><td class="bc"><div class="bar"><i class="r" style="width:3.5%;left:50%"></i></div></td>
+<td class="v">+7,4%</td><td class="bc"><div class="bar"><i class="r" style="width:3.7%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>17:00</b></td>
-<td class="v">−0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:8.8%;right:50%"></i></div></td>
-<td class="v">+3,1%</td><td class="bc"><div class="bar"><i class="r" style="width:1.5%;left:50%"></i></div></td>
+<td class="v">−0,3%</td><td class="bc"><div class="bar"><i class="r" style="width:9.3%;right:50%"></i></div></td>
+<td class="v">+3,5%</td><td class="bc"><div class="bar"><i class="r" style="width:1.8%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>18:00</b></td>
-<td class="v">−0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:3.9%;right:50%"></i></div></td>
-<td class="v">+3,6%</td><td class="bc"><div class="bar"><i class="r" style="width:1.8%;left:50%"></i></div></td>
+<td class="v">−0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:4.4%;right:50%"></i></div></td>
+<td class="v">+4,0%</td><td class="bc"><div class="bar"><i class="r" style="width:2.0%;left:50%"></i></div></td>
 <td class="n">2 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>19:00</b></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.1%;right:50%"></i></div></td>
-<td class="v">+3,6%</td><td class="bc"><div class="bar"><i class="r" style="width:1.8%;left:50%"></i></div></td>
+<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.6%;right:50%"></i></div></td>
+<td class="v">+4,1%</td><td class="bc"><div class="bar"><i class="r" style="width:2.0%;left:50%"></i></div></td>
 <td class="n">1 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>20:00</b></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:5.0%;right:50%"></i></div></td>
-<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="r" style="width:0.8%;left:50%"></i></div></td>
+<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:5.5%;right:50%"></i></div></td>
+<td class="v">+2,0%</td><td class="bc"><div class="bar"><i class="r" style="width:1.0%;left:50%"></i></div></td>
 <td class="n">7 / 1 день</td><td><span class="dim">мало данных: 1 из 3 дня</span></td></tr><tr class="weak"><td><b>21:00</b></td>
-<td class="v">+0,3%</td><td class="bc"><div class="bar"><i class="g" style="width:10.8%;left:50%"></i></div></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:0.0%;right:50%"></i></div></td>
+<td class="v">+0,3%</td><td class="bc"><div class="bar"><i class="g" style="width:10.4%;left:50%"></i></div></td>
+<td class="v">+0,4%</td><td class="bc"><div class="bar"><i class="r" style="width:0.2%;left:50%"></i></div></td>
 <td class="n">8 / 2 дня</td><td><span class="dim">мало данных: 2 из 3 дня</span></td></tr><tr class="weak"><td><b>22:00</b></td>
-<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:7.2%;right:50%"></i></div></td>
-<td class="v">+3,4%</td><td class="bc"><div class="bar"><i class="r" style="width:1.7%;left:50%"></i></div></td>
+<td class="v">−0,2%</td><td class="bc"><div class="bar"><i class="r" style="width:6.8%;right:50%"></i></div></td>
+<td class="v">+3,9%</td><td class="bc"><div class="bar"><i class="r" style="width:1.9%;left:50%"></i></div></td>
 <td class="n">12 / 2 дня</td><td><span class="dim">мало данных: 2 из 3 дня</span></td></tr><tr class="weak"><td><b>23:00</b></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:0.7%;left:50%"></i></div></td>
-<td class="v">−4,2%</td><td class="bc"><div class="bar"><i class="g" style="width:2.1%;right:50%"></i></div></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.3%;left:50%"></i></div></td>
+<td class="v">−3,8%</td><td class="bc"><div class="bar"><i class="g" style="width:1.9%;right:50%"></i></div></td>
 <td class="n">8 / 2 дня</td><td><span class="dim">мало данных: 2 из 3 дня</span></td></tr></tbody></table></div>
 
 <h2>По дням недели</h2>
@@ -181,15 +181,15 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="v">—</td><td class="bc"><div class="bar"></div></td>
 <td class="v">—</td><td class="bc"><div class="bar"></div></td>
 <td class="n">0 / 0 дней</td><td><span class="dim">нет замеров</span></td></tr><tr class="weak"><td><b>вторник</b></td>
-<td class="v">−0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:2.0%;right:50%"></i></div></td>
-<td class="v">+3,9%</td><td class="bc"><div class="bar"><i class="r" style="width:2.0%;left:50%"></i></div></td>
+<td class="v">−0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:2.4%;right:50%"></i></div></td>
+<td class="v">+4,4%</td><td class="bc"><div class="bar"><i class="r" style="width:2.2%;left:50%"></i></div></td>
 <td class="n">8 / 1 день</td><td><span class="dim">мало данных: 1 из 2 дня</span></td></tr><tr class="weak"><td><b>среда</b></td>
 <td class="v">−0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:3.3%;right:50%"></i></div></td>
-<td class="v">−2,1%</td><td class="bc"><div class="bar"><i class="g" style="width:1.1%;right:50%"></i></div></td>
+<td class="v">−1,7%</td><td class="bc"><div class="bar"><i class="g" style="width:0.8%;right:50%"></i></div></td>
 <td class="n">67 / 1 день</td><td><span class="dim">мало данных: 1 из 2 дня</span></td></tr><tr class="weak"><td><b>четверг</b></td>
-<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.6%;left:50%"></i></div></td>
-<td class="v">−3,1%</td><td class="bc"><div class="bar"><i class="g" style="width:1.6%;right:50%"></i></div></td>
-<td class="n">10 / 1 день</td><td><span class="dim">мало данных: 1 из 2 дня</span></td></tr><tr class="weak"><td><b>пятница</b></td>
+<td class="v">0,0%</td><td class="bc"><div class="bar"><i class="g" style="width:1.1%;left:50%"></i></div></td>
+<td class="v">−2,5%</td><td class="bc"><div class="bar"><i class="g" style="width:1.3%;right:50%"></i></div></td>
+<td class="n">11 / 1 день</td><td><span class="dim">мало данных: 1 из 2 дня</span></td></tr><tr class="weak"><td><b>пятница</b></td>
 <td class="v">—</td><td class="bc"><div class="bar"></div></td>
 <td class="v">—</td><td class="bc"><div class="bar"></div></td>
 <td class="n">0 / 0 дней</td><td><span class="dim">нет замеров</span></td></tr><tr class="weak"><td><b>суббота</b></td>
