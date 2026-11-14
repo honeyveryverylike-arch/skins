@@ -15,7 +15,7 @@ nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;bor
 nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
 .timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
 .timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
-.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="on">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1794618960000" data-step="3" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="on">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1794619680000" data-step="3" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(location.protocol==='file:'?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=(location.protocol==='file:'?1:3)*6e4;
 const next=last+step;
@@ -34,7 +34,7 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.innerHTML=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Бумажные сделки — проверка модели</h1>
-<div class="mut">Последний замер: <b>2026-11-14 02:16</b> · виртуальных покупок: 663</div>
+<div class="mut">Последний замер: <b>2026-11-14 02:28</b> · виртуальных покупок: 663</div>
 <div class="note">Пока ни одна сделка не прошла 7 дней лока. Первые результаты появятся <b>17.11, 21:09</b>. До этого сделки просто копятся.</div>
 <h2>Итог по группам</h2>
 <div class="wrap"><table><thead><tr><th>Группа</th><th class="n">Открыто</th><th class="n">В локе</th><th class="n">Прошли лок</th>
