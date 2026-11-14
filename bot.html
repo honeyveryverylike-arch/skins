@@ -16,7 +16,7 @@ nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;bor
 nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
 .timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
 .timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
-.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="bot.html" class="on">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1794618240000" data-step="3" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="bot.html" class="on">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1794618960000" data-step="3" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(location.protocol==='file:'?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=(location.protocol==='file:'?1:3)*6e4;
 const next=last+step;
@@ -35,14 +35,14 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.innerHTML=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Бот: конвейер (учебный режим)</h1>
-<div class="mut">Последний обработанный замер: <b>2026-11-14 02:04</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
+<div class="mut">Последний обработанный замер: <b>2026-11-14 02:16</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
 <div class="cards">
 <div class="card"><div class="k">Капитал сейчас</div><div class="v">4 346 ₽</div><div class="s">старт 4 346 ₽ · деньги 3 010 ₽</div></div>
 <div class="card"><div class="k">Часть бюджета в день</div><div class="v">543 ₽</div><div class="s">капитал ÷ 8 дней</div></div>
 <div class="card"><div class="k">В работе</div><div class="v">8 шт</div><div class="s">5 ждут разблокировку, 0 выставлены</div></div>
 <div class="card"><div class="k">Прибыль (продано)</div><div class="v pos">0 ₽</div><div class="s">продано позиций: 0</div></div>
 </div>
-<div class="note">Сейчас не покупает: лимиты не позволили (14.11 02:05).</div>
+<div class="note">Сейчас не покупает: лимиты не позволили (14.11 02:17).</div>
 <h2>По неделям</h2>
 <div class="wrap"><table><thead><tr><th>Неделя с</th><th class="n">Куплено, шт</th><th class="n">На сумму</th><th class="n">Продано, шт</th><th class="n">Прибыль</th><th class="n">% к вложенному в проданное</th></tr></thead><tbody>
 <tr><td>09.11.2026</td><td class="n">8</td><td class="n">1 336 ₽</td><td class="n">0</td><td class="n ">—</td><td class="n">—</td></tr>
