@@ -15,7 +15,7 @@ nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;bor
 nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
 .timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
 .timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
-.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="on">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795334340000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="on">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795334940000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -37,16 +37,16 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.innerHTML=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Бумажные сделки — проверка модели</h1>
-<div class="mut">Последний замер: <b>2026-11-22 08:59</b> · виртуальных покупок: 2665</div>
+<div class="mut">Последний замер: <b>2026-11-22 09:09</b> · виртуальных покупок: 2671</div>
 
 <h2>Итог по группам</h2>
 <div class="wrap"><table><thead><tr><th>Группа</th><th class="n">Открыто</th><th class="n">В локе</th><th class="n">Прошли лок</th>
 <th class="n">Прогноз</th><th class="n">Факт после лока</th><th class="n">Ошибка прогноза</th><th class="n">В плюсе</th><th class="n">Худшая</th><th class="n">Лучший момент дни 7–10</th></tr></thead>
-<tbody><tr><td><b>Кандидат</b></td><td class="n">73</td><td class="n">25</td><td class="n">48</td>
-<td class="n"><span class="pos">+7.3%</span></td><td class="n"><span class="pos">+1.8%</span></td><td class="n"><span class="neg">-5.5%</span></td>
-<td class="n">58%</td><td class="n"><span class="neg">-14.9%</span></td><td class="n"><span class="pos">+5.1%</span></td></tr><tr><td><b>На заметке</b></td><td class="n">663</td><td class="n">529</td><td class="n">134</td>
+<tbody><tr><td><b>Кандидат</b></td><td class="n">73</td><td class="n">24</td><td class="n">49</td>
+<td class="n"><span class="pos">+7.2%</span></td><td class="n"><span class="pos">+1.8%</span></td><td class="n"><span class="neg">-5.4%</span></td>
+<td class="n">59%</td><td class="n"><span class="neg">-14.9%</span></td><td class="n"><span class="pos">+5.0%</span></td></tr><tr><td><b>На заметке</b></td><td class="n">663</td><td class="n">529</td><td class="n">134</td>
 <td class="n"><span class="pos">+4.6%</span></td><td class="n"><span class="pos">+0.5%</span></td><td class="n"><span class="neg">-4.2%</span></td>
-<td class="n">57%</td><td class="n"><span class="neg">-26.2%</span></td><td class="n"><span class="pos">+2.4%</span></td></tr><tr><td><b>Не подходит (контроль)</b></td><td class="n">1929</td><td class="n">1266</td><td class="n">663</td>
+<td class="n">57%</td><td class="n"><span class="neg">-26.2%</span></td><td class="n"><span class="pos">+2.4%</span></td></tr><tr><td><b>Не подходит (контроль)</b></td><td class="n">1935</td><td class="n">1267</td><td class="n">668</td>
 <td class="n"><span class="neg">-2.9%</span></td><td class="n"><span class="neg">-2.5%</span></td><td class="n"><span class="pos">+0.4%</span></td>
 <td class="n">38%</td><td class="n"><span class="neg">-99.7%</span></td><td class="n"><span class="neg">-0.7%</span></td></tr></tbody></table></div>
 <h2>Купил → продал через 8 дней</h2>
@@ -56,7 +56,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">54%</td><td class="n">27%</td><td class="n"><span class="neg">-11.7%</span></td>
 <td class="n"><span class="pos">+5.4%</span><div class="sub mut">по 3</div></td></tr><tr><td><b>На заметке</b></td><td class="n">663</td><td class="n">79</td><td class="n"><span class="pos">+4.4%</span></td><td class="n"><span class="pos">+0.2%</span></td><td class="n"><span class="pos">+0.8%</span></td>
 <td class="n">56%</td><td class="n">28%</td><td class="n"><span class="neg">-26.6%</span></td>
-<td class="n"><span class="pos">+3.1%</span><div class="sub mut">по 10</div></td></tr><tr><td><b>Не подходит (контроль)</b></td><td class="n">1929</td><td class="n">516</td><td class="n"><span class="neg">-2.8%</span></td><td class="n"><span class="neg">-2.8%</span></td><td class="n"><span class="neg">-1.8%</span></td>
+<td class="n"><span class="pos">+3.1%</span><div class="sub mut">по 10</div></td></tr><tr><td><b>Не подходит (контроль)</b></td><td class="n">1935</td><td class="n">522</td><td class="n"><span class="neg">-2.8%</span></td><td class="n"><span class="neg">-2.8%</span></td><td class="n"><span class="neg">-1.8%</span></td>
 <td class="n">36%</td><td class="n">42%</td><td class="n"><span class="neg">-99.7%</span></td>
 <td class="n"><span class="neg">-3.7%</span><div class="sub mut">по 33</div></td></tr></tbody></table></div>
 <div class="wrap" style="margin-top:10px"><table><thead><tr><th>«Надёжный» при покупке</th><th class="n">Куплено</th><th class="n">Прошло 8 дней</th><th class="n">Прогноз в день покупки</th>
@@ -64,14 +64,32 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">—</td><td class="n">—</td><td class="n"><span class="mut">—</span></td>
 <td class="n">—</td></tr><tr><td><b>Прошёл всё, кроме профита ≥3%</b></td><td class="n">15</td><td class="n">0</td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td>
 <td class="n">—</td><td class="n">—</td><td class="n"><span class="mut">—</span></td>
-<td class="n">—</td></tr><tr><td><b>Не прошёл другие условия</b></td><td class="n">1456</td><td class="n">0</td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td>
+<td class="n">—</td></tr><tr><td><b>Не прошёл другие условия</b></td><td class="n">1462</td><td class="n">0</td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td><td class="n"><span class="mut">—</span></td>
 <td class="n">—</td><td class="n">—</td><td class="n"><span class="mut">—</span></td>
-<td class="n">—</td></tr><tr><td><b>Не записано (куплено до 16.11)</b></td><td class="n">1191</td><td class="n">632</td><td class="n"><span class="neg">-1.3%</span></td><td class="n"><span class="neg">-2.2%</span></td><td class="n"><span class="neg">-1.3%</span></td>
+<td class="n">—</td></tr><tr><td><b>Не записано (куплено до 16.11)</b></td><td class="n">1191</td><td class="n">638</td><td class="n"><span class="neg">-1.3%</span></td><td class="n"><span class="neg">-2.2%</span></td><td class="n"><span class="neg">-1.3%</span></td>
 <td class="n">40%</td><td class="n">39%</td><td class="n"><span class="neg">-99.7%</span></td>
 <td class="n"><span class="neg">-1.6%</span><div class="sub mut">по 46</div></td></tr></tbody></table></div>
 <h2>Сделки, прошедшие лок</h2>
 <div class="wrap"><table><thead><tr><th>Группа</th><th>Скин</th><th>Куплено</th><th class="n">Цена покупки</th><th class="n">Прогноз выхода</th>
-<th class="n">Факт на 7-й день</th><th class="n">Через 8 дней</th><th class="n">Лучший 7–10 день</th><th>Статус</th></tr></thead><tbody><tr><td>На заметке</td><td>AWP | Queen's Gambit (Battle-Scarred)</td><td>2026-11-15 05:31</td><td class="n">2 984 ₽</td>
+<th class="n">Факт на 7-й день</th><th class="n">Через 8 дней</th><th class="n">Лучший 7–10 день</th><th>Статус</th></tr></thead><tbody><tr><td>Не подходит (контроль)</td><td>AK-47 | Neon Rider (Battle-Scarred)</td><td>2026-11-15 09:04</td><td class="n">3 129 ₽</td>
+<td class="n">3 493 ₽<div class="sub"><span class="neg">-0.1%</span></div></td><td class="n">3 415 ₽<div class="sub"><span class="neg">-2.4%</span></div></td>
+<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
+<td class="n">3 416 ₽<div class="sub"><span class="neg">-2.4%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A4 | 龍王 (Dragon King) (Battle-Scarred)</td><td>2026-11-15 09:04</td><td class="n">928 ₽</td>
+<td class="n">1 020 ₽<div class="sub"><span class="neg">-1.2%</span></div></td><td class="n">1 050 ₽<div class="sub"><span class="pos">+1.7%</span></div></td>
+<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
+<td class="n">1 050 ₽<div class="sub"><span class="pos">+1.7%</span></div></td><td>продаётся</td></tr><tr><td>Кандидат</td><td>StatTrak™ M4A4 | Desolate Space (Battle-Scarred)</td><td>2026-11-15 09:04</td><td class="n">1 977 ₽</td>
+<td class="n">2 278 ₽<div class="sub"><span class="pos">+3.6%</span></div></td><td class="n">2 218 ₽<div class="sub"><span class="pos">+0.8%</span></div></td>
+<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
+<td class="n">2 218 ₽<div class="sub"><span class="pos">+0.8%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Hydra Gloves | Emerald (Battle-Scarred)</td><td>2026-11-15 09:04</td><td class="n">2 488 ₽</td>
+<td class="n">2 768 ₽<div class="sub"><span class="neg">-0.0%</span></div></td><td class="n">2 722 ₽<div class="sub"><span class="neg">-1.7%</span></div></td>
+<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
+<td class="n">2 722 ₽<div class="sub"><span class="neg">-1.7%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ AWP | Chromatic Aberration (Battle-Scarred)</td><td>2026-11-15 09:04</td><td class="n">1 740 ₽</td>
+<td class="n">1 907 ₽<div class="sub"><span class="neg">-2.0%</span></div></td><td class="n">1 881 ₽<div class="sub"><span class="neg">-3.3%</span></div></td>
+<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
+<td class="n">1 881 ₽<div class="sub"><span class="neg">-3.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Fatal Glitch (Well-Worn)</td><td>2026-11-15 09:04</td><td class="n">1 595 ₽</td>
+<td class="n">1 689 ₽<div class="sub"><span class="neg">-4.8%</span></div></td><td class="n">1 798 ₽<div class="sub"><span class="pos">+1.3%</span></div></td>
+<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
+<td class="n">1 798 ₽<div class="sub"><span class="pos">+1.3%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>AWP | Queen's Gambit (Battle-Scarred)</td><td>2026-11-15 05:31</td><td class="n">2 984 ₽</td>
 <td class="n">3 404 ₽<div class="sub"><span class="pos">+2.5%</span></div></td><td class="n">3 274 ₽<div class="sub"><span class="neg">-1.4%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">3 743 ₽<div class="sub"><span class="pos">+12.7%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ AWP | Exoskeleton (Well-Worn)</td><td>2026-11-15 05:31</td><td class="n">505 ₽</td>
@@ -173,11 +191,11 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">648 ₽<div class="sub"><span class="neg">-9.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AWP | LongDog (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 692 ₽</td>
 <td class="n">3 004 ₽<div class="sub"><span class="neg">-0.2%</span></div></td><td class="n">3 122 ₽<div class="sub"><span class="pos">+3.7%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">3 130 ₽<div class="sub"><span class="pos">+4.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Aquamarine Revenge (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 227 ₽</td>
+<td class="n">3 131 ₽<div class="sub"><span class="pos">+4.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Aquamarine Revenge (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 227 ₽</td>
 <td class="n">2 322 ₽<div class="sub"><span class="neg">-10.7%</span></div></td><td class="n">2 441 ₽<div class="sub"><span class="neg">-6.1%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 453 ₽<div class="sub"><span class="neg">-5.6%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>AK-47 | Cartel (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">1 142 ₽</td>
-<td class="n">1 312 ₽<div class="sub"><span class="pos">+3.2%</span></div></td><td class="n">1 208 ₽<div class="sub"><span class="neg">-4.9%</span></div></td>
+<td class="n">1 312 ₽<div class="sub"><span class="pos">+3.2%</span></div></td><td class="n">1 209 ₽<div class="sub"><span class="neg">-4.9%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">1 229 ₽<div class="sub"><span class="neg">-3.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Vaporwave (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 957 ₽</td>
 <td class="n">3 276 ₽<div class="sub"><span class="neg">-0.9%</span></div></td><td class="n">3 292 ₽<div class="sub"><span class="neg">-0.4%</span></div></td>
@@ -209,8 +227,8 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">803 ₽<div class="sub"><span class="pos">+5.3%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>Desert Eagle | Starcade (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">1 970 ₽</td>
 <td class="n">2 298 ₽<div class="sub"><span class="pos">+4.3%</span></div></td><td class="n">2 097 ₽<div class="sub"><span class="neg">-4.8%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">2 110 ₽<div class="sub"><span class="neg">-4.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Asiimov (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">3 059 ₽</td>
-<td class="n">3 412 ₽<div class="sub"><span class="neg">-0.2%</span></div></td><td class="n">3 329 ₽<div class="sub"><span class="neg">-2.7%</span></div></td>
+<td class="n">2 110 ₽<div class="sub"><span class="neg">-4.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Asiimov (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">3 060 ₽</td>
+<td class="n">3 413 ₽<div class="sub"><span class="neg">-0.2%</span></div></td><td class="n">3 329 ₽<div class="sub"><span class="neg">-2.7%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">3 329 ₽<div class="sub"><span class="neg">-2.7%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>AWP | PAW (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">148 ₽</td>
 <td class="n">175 ₽<div class="sub"><span class="pos">+6.1%</span></div></td><td class="n">172 ₽<div class="sub"><span class="pos">+4.0%</span></div></td>
@@ -222,7 +240,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">587 ₽<div class="sub"><span class="pos">+13.5%</span></div></td><td class="n">435 ₽<div class="sub"><span class="neg">-16.0%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">435 ₽<div class="sub"><span class="neg">-16.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Fatal Glitch (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">1 414 ₽</td>
-<td class="n">1 660 ₽<div class="sub"><span class="pos">+0.6%</span></div></td><td class="n">1 807 ₽<div class="sub"><span class="pos">+9.5%</span></div></td>
+<td class="n">1 661 ₽<div class="sub"><span class="pos">+0.6%</span></div></td><td class="n">1 807 ₽<div class="sub"><span class="pos">+9.5%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">1 808 ₽<div class="sub"><span class="pos">+9.5%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>StatTrak™ AWP | Duality (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">352 ₽</td>
 <td class="n">424 ₽<div class="sub"><span class="pos">+7.6%</span></div></td><td class="n">474 ₽<div class="sub"><span class="pos">+20.2%</span></div></td>
@@ -258,9 +276,9 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">188 ₽<div class="sub"><span class="pos">+3.3%</span></div></td><td class="n">180 ₽<div class="sub"><span class="neg">-1.3%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">180 ₽<div class="sub"><span class="neg">-1.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Moto Gloves | Finish Line (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">3 853 ₽</td>
-<td class="n">4 210 ₽<div class="sub"><span class="neg">-1.8%</span></div></td><td class="n">4 259 ₽<div class="sub"><span class="neg">-0.6%</span></div></td>
+<td class="n">4 210 ₽<div class="sub"><span class="neg">-1.8%</span></div></td><td class="n">4 260 ₽<div class="sub"><span class="neg">-0.6%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">4 259 ₽<div class="sub"><span class="neg">-0.6%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>USP-S | The Traitor (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 232 ₽</td>
+<td class="n">4 260 ₽<div class="sub"><span class="neg">-0.6%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>USP-S | The Traitor (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 232 ₽</td>
 <td class="n">2 461 ₽<div class="sub"><span class="neg">-1.4%</span></div></td><td class="n">2 448 ₽<div class="sub"><span class="neg">-1.9%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 462 ₽<div class="sub"><span class="neg">-1.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Kukri Knife | Urban Masked (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">3 338 ₽</td>
@@ -320,7 +338,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">894 ₽<div class="sub"><span class="neg">-7.9%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>Desert Eagle | Mecha Industries (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">406 ₽</td>
 <td class="n">454 ₽<div class="sub"><span class="pos">+0.1%</span></div></td><td class="n">447 ₽<div class="sub"><span class="neg">-1.4%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">449 ₽<div class="sub"><span class="neg">-1.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ Glock-18 | Fully Tuned (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 788 ₽</td>
+<td class="n">449 ₽<div class="sub"><span class="neg">-1.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ Glock-18 | Fully Tuned (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 789 ₽</td>
 <td class="n">3 174 ₽<div class="sub"><span class="pos">+1.8%</span></div></td><td class="n">3 012 ₽<div class="sub"><span class="neg">-3.4%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">3 049 ₽<div class="sub"><span class="neg">-2.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Nightmare (Well-Worn)</td><td>2026-11-14 22:13</td><td class="n">496 ₽</td>
@@ -339,7 +357,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">2 805 ₽<div class="sub"><span class="neg">-1.3%</span></div></td><td class="n">2 700 ₽<div class="sub"><span class="neg">-5.0%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 705 ₽<div class="sub"><span class="neg">-4.8%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | The Outsiders (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">395 ₽</td>
-<td class="n">439 ₽<div class="sub"><span class="neg">-0.0%</span></div></td><td class="n">437 ₽<div class="sub"><span class="neg">-0.6%</span></div></td>
+<td class="n">440 ₽<div class="sub"><span class="neg">-0.0%</span></div></td><td class="n">437 ₽<div class="sub"><span class="neg">-0.6%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">444 ₽<div class="sub"><span class="pos">+1.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>Glock-18 | Nuclear Garden (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">138 ₽</td>
 <td class="n">154 ₽<div class="sub"><span class="pos">+0.5%</span></div></td><td class="n">160 ₽<div class="sub"><span class="pos">+4.4%</span></div></td>
@@ -371,13 +389,13 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">2 328 ₽<div class="sub"><span class="neg">-4.8%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">1 283 ₽</td>
 <td class="n">1 426 ₽<div class="sub"><span class="neg">-0.1%</span></div></td><td class="n">1 472 ₽<div class="sub"><span class="pos">+3.1%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">1 474 ₽<div class="sub"><span class="pos">+3.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Legion of Anubis (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">2 410 ₽</td>
+<td class="n">1 474 ₽<div class="sub"><span class="pos">+3.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Legion of Anubis (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">2 411 ₽</td>
 <td class="n">2 524 ₽<div class="sub"><span class="neg">-5.9%</span></div></td><td class="n">2 442 ₽<div class="sub"><span class="neg">-8.9%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">2 462 ₽<div class="sub"><span class="neg">-8.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ AK-47 | Ice Coaled (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">680 ₽</td>
+<td class="n">2 463 ₽<div class="sub"><span class="neg">-8.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ AK-47 | Ice Coaled (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">680 ₽</td>
 <td class="n">739 ₽<div class="sub"><span class="neg">-2.7%</span></div></td><td class="n">745 ₽<div class="sub"><span class="neg">-1.9%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">759 ₽<div class="sub"><span class="neg">-0.0%</span></div></td><td>продаётся</td></tr><tr><td>Кандидат</td><td>StatTrak™ MAC-10 | Saibā Oni (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">188 ₽</td>
+<td class="n">760 ₽<div class="sub"><span class="neg">-0.0%</span></div></td><td>продаётся</td></tr><tr><td>Кандидат</td><td>StatTrak™ MAC-10 | Saibā Oni (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">188 ₽</td>
 <td class="n">255 ₽<div class="sub"><span class="pos">+21.6%</span></div></td><td class="n">203 ₽<div class="sub"><span class="neg">-3.2%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">203 ₽<div class="sub"><span class="neg">-3.1%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>M4A1-S | Nightmare (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">483 ₽</td>
@@ -395,7 +413,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">365 ₽<div class="sub"><span class="neg">-0.9%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A4 | 龍王 (Dragon King) (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">948 ₽</td>
 <td class="n">1 044 ₽<div class="sub"><span class="neg">-1.5%</span></div></td><td class="n">1 039 ₽<div class="sub"><span class="neg">-2.1%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">1 052 ₽<div class="sub"><span class="neg">-0.7%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Moto Gloves | POW! (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">3 783 ₽</td>
+<td class="n">1 052 ₽<div class="sub"><span class="neg">-0.7%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Moto Gloves | POW! (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">3 784 ₽</td>
 <td class="n">4 159 ₽<div class="sub"><span class="neg">-1.7%</span></div></td><td class="n">3 680 ₽<div class="sub"><span class="neg">-13.0%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">3 680 ₽<div class="sub"><span class="neg">-13.0%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>M4A1-S | Leaded Glass (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">770 ₽</td>
@@ -426,7 +444,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">185 ₽<div class="sub"><span class="pos">+3.8%</span></div></td><td class="n">174 ₽<div class="sub"><span class="neg">-2.4%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">176 ₽<div class="sub"><span class="neg">-1.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Driver Gloves | Racing Green (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">2 216 ₽</td>
-<td class="n">2 341 ₽<div class="sub"><span class="neg">-5.1%</span></div></td><td class="n">2 300 ₽<div class="sub"><span class="neg">-6.7%</span></div></td>
+<td class="n">2 341 ₽<div class="sub"><span class="neg">-5.1%</span></div></td><td class="n">2 301 ₽<div class="sub"><span class="neg">-6.7%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 332 ₽<div class="sub"><span class="neg">-5.4%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Point Disarray (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">962 ₽</td>
 <td class="n">1 054 ₽<div class="sub"><span class="neg">-1.6%</span></div></td><td class="n">1 082 ₽<div class="sub"><span class="pos">+1.0%</span></div></td>
@@ -459,7 +477,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">2 368 ₽<div class="sub"><span class="pos">+3.3%</span></div></td><td class="n">2 191 ₽<div class="sub"><span class="neg">-4.4%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 205 ₽<div class="sub"><span class="neg">-3.8%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>AWP | Chromatic Aberration (Battle-Scarred)</td><td>2026-11-14 22:13</td><td class="n">2 236 ₽</td>
-<td class="n">2 593 ₽<div class="sub"><span class="pos">+3.7%</span></div></td><td class="n">2 439 ₽<div class="sub"><span class="neg">-2.4%</span></div></td>
+<td class="n">2 593 ₽<div class="sub"><span class="pos">+3.7%</span></div></td><td class="n">2 440 ₽<div class="sub"><span class="neg">-2.4%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 441 ₽<div class="sub"><span class="neg">-2.4%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A4 | Tooth Fairy (Field-Tested)</td><td>2026-11-14 22:13</td><td class="n">286 ₽</td>
 <td class="n">304 ₽<div class="sub"><span class="neg">-5.1%</span></div></td><td class="n">297 ₽<div class="sub"><span class="neg">-7.1%</span></div></td>
@@ -495,7 +513,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">348 ₽<div class="sub"><span class="pos">+0.3%</span></div></td><td class="n">334 ₽<div class="sub"><span class="neg">-3.9%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">334 ₽<div class="sub"><span class="neg">-3.9%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>USP-S | Printstream (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">2 377 ₽</td>
-<td class="n">2 682 ₽<div class="sub"><span class="pos">+0.9%</span></div></td><td class="n">2 659 ₽<div class="sub"><span class="pos">+0.1%</span></div></td>
+<td class="n">2 683 ₽<div class="sub"><span class="pos">+0.9%</span></div></td><td class="n">2 660 ₽<div class="sub"><span class="pos">+0.1%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 660 ₽<div class="sub"><span class="pos">+0.1%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AWP | Green Energy (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">236 ₽</td>
 <td class="n">256 ₽<div class="sub"><span class="neg">-3.2%</span></div></td><td class="n">251 ₽<div class="sub"><span class="neg">-4.8%</span></div></td>
@@ -510,7 +528,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">2 795 ₽<div class="sub"><span class="pos">+0.9%</span></div></td><td class="n">2 686 ₽<div class="sub"><span class="neg">-3.0%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">2 701 ₽<div class="sub"><span class="neg">-2.5%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>M4A4 | Hellish (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">739 ₽</td>
-<td class="n">846 ₽<div class="sub"><span class="pos">+2.5%</span></div></td><td class="n">821 ₽<div class="sub"><span class="neg">-0.5%</span></div></td>
+<td class="n">847 ₽<div class="sub"><span class="pos">+2.5%</span></div></td><td class="n">821 ₽<div class="sub"><span class="neg">-0.5%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">822 ₽<div class="sub"><span class="neg">-0.5%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AWP | Crakow! (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">1 293 ₽</td>
 <td class="n">1 435 ₽<div class="sub"><span class="neg">-0.7%</span></div></td><td class="n">1 424 ₽<div class="sub"><span class="neg">-1.5%</span></div></td>
@@ -524,7 +542,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">355 ₽<div class="sub"><span class="neg">-1.7%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Inheritance (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">2 286 ₽</td>
 <td class="n">2 554 ₽<div class="sub"><span class="pos">+0.4%</span></div></td><td class="n">2 435 ₽<div class="sub"><span class="neg">-4.3%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">2 449 ₽<div class="sub"><span class="neg">-3.7%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Decimator (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">898 ₽</td>
+<td class="n">2 460 ₽<div class="sub"><span class="neg">-3.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Decimator (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">898 ₽</td>
 <td class="n">1 009 ₽<div class="sub"><span class="pos">+1.0%</span></div></td><td class="n">1 027 ₽<div class="sub"><span class="pos">+2.8%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">1 032 ₽<div class="sub"><span class="pos">+3.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Black Lotus (Field-Tested)</td><td>2026-11-14 21:16</td><td class="n">282 ₽</td>
@@ -539,13 +557,13 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">2 274 ₽<div class="sub"><span class="neg">-2.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AWP | Exothermic (Field-Tested)</td><td>2026-11-14 21:16</td><td class="n">184 ₽</td>
 <td class="n">198 ₽<div class="sub"><span class="neg">-3.3%</span></div></td><td class="n">202 ₽<div class="sub"><span class="neg">-1.0%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">206 ₽<div class="sub"><span class="pos">+0.5%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>Sawed-Off | Kiss♥Love (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">245 ₽</td>
+<td class="n">206 ₽<div class="sub"><span class="pos">+0.5%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>Sawed-Off | Kiss♥Love (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">246 ₽</td>
 <td class="n">274 ₽<div class="sub"><span class="pos">+0.3%</span></div></td><td class="n">272 ₽<div class="sub"><span class="neg">-0.2%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">275 ₽<div class="sub"><span class="pos">+0.5%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AWP | Ice Coaled (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">281 ₽</td>
 <td class="n">313 ₽<div class="sub"><span class="pos">+0.1%</span></div></td><td class="n">353 ₽<div class="sub"><span class="pos">+12.9%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">355 ₽<div class="sub"><span class="pos">+13.6%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>M4A4 | Full Throttle (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">1 721 ₽</td>
+<td class="n">356 ₽<div class="sub"><span class="pos">+13.6%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>M4A4 | Full Throttle (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">1 721 ₽</td>
 <td class="n">2 084 ₽<div class="sub"><span class="pos">+8.3%</span></div></td><td class="n">1 962 ₽<div class="sub"><span class="pos">+2.0%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">1 962 ₽<div class="sub"><span class="pos">+2.0%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>USP-S | Jawbreaker (Battle-Scarred)</td><td>2026-11-14 21:16</td><td class="n">234 ₽</td>
@@ -632,7 +650,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">300 ₽<div class="sub"><span class="pos">+2.4%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>★ Moto Gloves | Transport (Battle-Scarred)</td><td>2026-11-14 13:55</td><td class="n">2 615 ₽</td>
 <td class="n">2 995 ₽<div class="sub"><span class="pos">+2.4%</span></div></td><td class="n">2 988 ₽<div class="sub"><span class="pos">+2.2%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">2 995 ₽<div class="sub"><span class="pos">+2.4%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>★ Falchion Knife | Bright Water (Field-Tested)</td><td>2026-11-14 13:55</td><td class="n">4 550 ₽</td>
+<td class="n">2 995 ₽<div class="sub"><span class="pos">+2.4%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>★ Falchion Knife | Bright Water (Field-Tested)</td><td>2026-11-14 13:55</td><td class="n">4 551 ₽</td>
 <td class="n">5 204 ₽<div class="sub"><span class="pos">+2.3%</span></div></td><td class="n">5 180 ₽<div class="sub"><span class="pos">+1.8%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">5 193 ₽<div class="sub"><span class="pos">+2.1%</span></div></td><td>продаётся</td></tr><tr><td>Кандидат</td><td>StatTrak™ AK-47 | Slate (Battle-Scarred)</td><td>2026-11-14 13:55</td><td class="n">763 ₽</td>
@@ -648,30 +666,12 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">303 ₽<div class="sub"><span class="pos">+0.4%</span></div></td><td class="n">296 ₽<div class="sub"><span class="neg">-2.0%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">302 ₽<div class="sub"><span class="pos">+0.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Survival Knife | Tiger Tooth (Factory New)</td><td>2026-11-14 13:55</td><td class="n">7 494 ₽</td>
-<td class="n">8 353 ₽<div class="sub"><span class="neg">-0.3%</span></div></td><td class="n">8 102 ₽<div class="sub"><span class="neg">-3.3%</span></div></td>
+<td class="n">8 353 ₽<div class="sub"><span class="neg">-0.3%</span></div></td><td class="n">8 103 ₽<div class="sub"><span class="neg">-3.3%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
 <td class="n">8 107 ₽<div class="sub"><span class="neg">-3.2%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Golden Coil (Battle-Scarred)</td><td>2026-11-14 13:55</td><td class="n">3 837 ₽</td>
 <td class="n">4 088 ₽<div class="sub"><span class="neg">-4.7%</span></div></td><td class="n">4 125 ₽<div class="sub"><span class="neg">-3.8%</span></div></td>
 <td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">4 138 ₽<div class="sub"><span class="neg">-3.5%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>M4A1-S | Solitude (Battle-Scarred)</td><td>2026-11-14 13:31</td><td class="n">88,5 ₽</td>
-<td class="n">93,0 ₽<div class="sub"><span class="neg">-6.1%</span></div></td><td class="n">111 ₽<div class="sub"><span class="pos">+12.0%</span></div></td>
-<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">113 ₽<div class="sub"><span class="pos">+14.1%</span></div></td><td>продаётся</td></tr><tr><td>На заметке</td><td>Desert Eagle | Directive (Battle-Scarred)</td><td>2026-11-13 22:13</td><td class="n">86,1 ₽</td>
-<td class="n">99,5 ₽<div class="sub"><span class="pos">+3.3%</span></div></td><td class="n">87,8 ₽<div class="sub"><span class="neg">-8.9%</span></div></td>
-<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">89,7 ₽<div class="sub"><span class="neg">-6.8%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>AK-47 | Frontside Misty (Battle-Scarred)</td><td>2026-11-14 11:31</td><td class="n">1 161 ₽</td>
-<td class="n">1 294 ₽<div class="sub"><span class="pos">+0.2%</span></div></td><td class="n">1 257 ₽<div class="sub"><span class="neg">-2.6%</span></div></td>
-<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">1 265 ₽<div class="sub"><span class="neg">-2.1%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Sport Gloves | Omega (Battle-Scarred)</td><td>2026-11-14 10:40</td><td class="n">9 316 ₽</td>
-<td class="n">10 376 ₽<div class="sub"><span class="neg">-0.4%</span></div></td><td class="n">10 238 ₽<div class="sub"><span class="neg">-1.7%</span></div></td>
-<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">10 238 ₽<div class="sub"><span class="neg">-1.7%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>StatTrak™ M4A4 | Temukau (Battle-Scarred)</td><td>2026-11-14 10:40</td><td class="n">2 014 ₽</td>
-<td class="n">2 262 ₽<div class="sub"><span class="pos">+1.0%</span></div></td><td class="n">2 092 ₽<div class="sub"><span class="neg">-6.6%</span></div></td>
-<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">2 143 ₽<div class="sub"><span class="neg">-4.3%</span></div></td><td>продаётся</td></tr><tr><td>Не подходит (контроль)</td><td>★ Sport Gloves | Bronze Morph (Battle-Scarred)</td><td>2026-11-14 10:40</td><td class="n">5 060 ₽</td>
-<td class="n">5 577 ₽<div class="sub"><span class="neg">-0.9%</span></div></td><td class="n">5 398 ₽<div class="sub"><span class="neg">-4.1%</span></div></td>
-<td class="n">—<div class="sub"><span class="mut">—</span></div></td>
-<td class="n">5 708 ₽<div class="sub"><span class="pos">+1.4%</span></div></td><td>продаётся</td></tr></tbody></table></div>
+<td class="n">4 139 ₽<div class="sub"><span class="neg">-3.5%</span></div></td><td>продаётся</td></tr></tbody></table></div>
 <div class="legend"><b>Как работает.</b> Каждый час по каждому скину из таблицы (не чаще раза в сутки на скин) записывается виртуальная покупка на Lis-skins по текущей цене.
 Через 7 дней (конец лока) берётся реальная цена выхода на MC и считается фактический профит после всех комиссий; ещё 3 дня отслеживается лучший момент для продажи.
 <b>Контроль</b> — скины без сигнала: если «Кандидаты» не лучше контроля, сигнал ничего не стоит.
