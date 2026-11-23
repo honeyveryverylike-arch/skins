@@ -1,0 +1,108 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Купить — арбитраж скинов</title><style>
+:root{--bg:#f4f4f1;--card:#fff;--fg:#18181b;--mut:#71717a;--line:#e4e4e7;--pos:#15803d;--neg:#b91c1c;--midc:#a16207;
+--buy:#dcfce7;--buyf:#166534;--watch:#fef3c7;--watchf:#92400e;--no:#f1f1f1;--nof:#71717a;--head:#fafafa;
+--c1:#2563eb;--c2:#7c3aed;--c3:#16a34a;--c4:#ea580c;--c5:#0891b2}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--card:#1a1a1d;--fg:#ececee;--mut:#8b8b93;--line:#2a2a2f;--pos:#4ade80;--neg:#f87171;--midc:#facc15;
+--buy:#14532d;--buyf:#bbf7d0;--watch:#422006;--watchf:#fde68a;--no:#26262b;--nof:#a1a1aa;--head:#1f1f23;
+--c1:#60a5fa;--c2:#a78bfa;--c3:#4ade80;--c4:#fb923c;--c5:#22d3ee}}
+*{box-sizing:border-box}body{margin:0;padding:20px;background:var(--bg);color:var(--fg);font:14px/1.4 "Segoe UI",system-ui,sans-serif}
+h1{margin:0;font-size:22px}.mut{color:var(--mut)}.dim{color:var(--mut);opacity:.7}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:inherit;text-decoration:none}
+.card.link:hover{border-color:var(--mut)}.card .k{color:var(--mut);font-size:12px}.card.link .k::after{content:" ›"}
+.card .v{font-size:22px;font-weight:650;margin-top:2px}.card .vs{font-size:14px;font-weight:400;color:var(--mut)}.card .vs .pos{color:var(--pos)}
+.card .s{font-size:12px;color:var(--mut)}
+.bar{display:flex;gap:10px;align-items:center;margin:0 0 10px;flex-wrap:wrap}
+input[type=search]{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);min-width:240px;font:inherit}
+.seg{display:flex;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:3px}
+.seg button{all:unset;cursor:pointer;padding:5px 11px;border-radius:6px;color:var(--mut);font-size:13px}.seg button:hover{color:var(--fg)}
+.seg button.on{background:var(--head);color:var(--fg);font-weight:600}
+.reset{all:unset;cursor:pointer;font-size:12px;color:var(--mut);text-decoration:underline;text-underline-offset:3px}.reset:hover{color:var(--fg)}
+.hint{font-size:12px;color:var(--mut);margin-left:auto}kbd{font:inherit;font-size:11px;padding:0 5px;border:1px solid var(--line);border-radius:4px;background:var(--card)}
+.wrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:auto;max-height:calc(100vh - 140px)}
+table{border-collapse:separate;border-spacing:0;width:100%}
+th{position:sticky;top:0;z-index:1;background:var(--head);text-align:left;font-size:12px;font-weight:600;color:var(--mut);padding:10px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;user-select:none}
+th:hover{color:var(--fg)}th.n{text-align:right}th[aria-sort]{color:var(--fg)}th[aria-sort=descending]::after{content:" ▾"}th[aria-sort=ascending]::after{content:" ▴"}
+td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+tr.main{cursor:pointer}tr.main:hover td{background:color-mix(in srgb,var(--line) 35%,transparent)}
+tr.main:focus-visible{outline:2px solid var(--c1);outline-offset:-2px}
+.n{text-align:right;font-variant-numeric:tabular-nums}.big{font-size:15px;font-weight:650}
+.sub{font-size:11px;color:var(--mut);margin-top:1px}.gun{font-size:14px}.wear{font-size:12px;color:var(--mut)}
+.skin{display:flex;align-items:center;gap:10px}.thumb{width:36px;height:27px;object-fit:contain;flex:none;display:inline-block}
+.st{font-size:10px;font-weight:700;color:#ea580c;border:1px solid #ea580c;border-radius:4px;padding:0 3px;margin-right:5px}
+.pos{color:var(--pos)}.neg{color:var(--neg)}.midc{color:var(--midc)}
+.caret{display:inline-block;width:12px;color:var(--mut);transition:transform .15s}tr.open .caret{transform:rotate(90deg)}
+.pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:600}
+.pill.buy{background:var(--buy);color:var(--buyf)}.pill.watch{background:var(--watch);color:var(--watchf)}.pill.no{background:var(--no);color:var(--nof)}
+.chg{margin-left:6px;font-size:11px;font-weight:600}.chg.up{color:var(--pos)}.chg.down{color:var(--mut)}
+.q{padding:2px 7px;border-radius:6px;font-size:12px;font-weight:600}.q.good{background:var(--buy);color:var(--buyf)}
+.q.mid{background:var(--watch);color:var(--watchf)}.q.bad{background:color-mix(in srgb,var(--neg) 18%,transparent);color:var(--neg)}
+.spark polyline{fill:none;stroke-width:1.8}.spark .up{stroke:var(--pos)}.spark .mid{stroke:var(--midc)}.spark .down{stroke:var(--neg)}
+.spark .zero{stroke:var(--line);stroke-width:1}.spark .thr{stroke:var(--pos);stroke-width:1;stroke-dasharray:3 3;opacity:.5}
+tr.det td{background:var(--head);white-space:normal;padding:14px 16px}
+.det-grid{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:20px;max-width:1300px}
+.facts{display:grid;grid-template-columns:1fr auto;gap:5px 12px;font-size:13px;align-content:start}.facts span{color:var(--mut)}
+.actions{grid-column:1/-1;display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.btn{all:unset;cursor:pointer;text-align:center;font-size:13px;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.btn:hover{border-color:var(--mut)}
+.lg{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;margin:0 0 6px}.lg span{display:flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+svg.chart{width:100%;height:auto;display:block}svg.chart text{font-size:11px;fill:var(--mut)}
+svg.chart .grid{stroke:var(--line)}svg.chart .ln{fill:none;stroke-width:2}svg.chart .cur{stroke:var(--mut);stroke-dasharray:3 3}
+.chartbox{position:relative}.tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.25);display:none;white-space:nowrap;z-index:2}
+tr.flash td{animation:flash 1.6s ease-out}@keyframes flash{0%{background:color-mix(in srgb,var(--pos) 25%,transparent)}100%{background:transparent}}
+.legend{margin-top:14px;font-size:12px;color:var(--mut);line-height:1.6;max-width:1100px}.legend b{color:var(--fg)}
+.legend summary{cursor:pointer;color:var(--fg);font-size:13px;margin-bottom:6px}
+.meta{margin-top:4px}.small{font-size:12px;margin-top:2px}.fresh{border-bottom:1px dotted var(--mut);cursor:help}
+.why{display:inline-block;margin-left:6px;color:var(--mut);cursor:help;font-size:13px}.why:hover{color:var(--fg)}
+.wk{font-size:11px;font-weight:600;color:var(--mut);border:1px solid var(--line);border-radius:4px;padding:0 4px;margin-left:4px;vertical-align:1px}
+body:not(.more) .x{display:none}
+.more-btn{all:unset;cursor:pointer;font-size:13px;padding:6px 11px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}.more-btn:hover{color:var(--fg)}.more-btn[aria-pressed=true]{color:var(--fg);border-color:var(--mut)}
+.xfacts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px 18px;margin-top:12px;font-size:13px}.xfacts div span{display:block;color:var(--mut);font-size:11px}
+@media (max-width:700px){.m{display:none!important}body{padding:12px}h1{font-size:18px}.cards{grid-template-columns:1fr 1fr;gap:8px}.card .v{font-size:19px}.thumb,.caret,.why,.chg,.hint{display:none!important}.seg{flex-wrap:wrap;width:100%}.seg button{padding:5px 8px;font-size:12px}input[type=search]{min-width:0;width:100%}td,th{padding:6px 6px}td:nth-child(2){white-space:normal;min-width:120px}.gun{font-size:13px;line-height:1.25}.pill{padding:2px 6px;font-size:10px}.big{font-size:14px}.wrap{max-height:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:900px){.det-grid{grid-template-columns:1fr}.hint{display:none}}
+nav.top{display:flex;gap:6px;align-items:center;margin:0 0 14px;flex-wrap:wrap}
+nav.top a{text-decoration:none;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:13px}
+nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;border-color:var(--mut)}
+nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
+.timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
+.timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
+.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}
+.buy-page{max-width:960px}.buy-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px}
+.buy-item,.buy-empty{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.buy-item h2{font-size:17px;margin:0;overflow-wrap:anywhere}.buy-item .venue{margin:3px 0 12px;color:var(--mut)}
+.buy-item dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}.buy-item dt{font-size:12px;color:var(--mut)}
+.buy-item dd{font-weight:650;margin:2px 0}.buy-item p:last-child{font-size:12px;margin:12px 0 0}
+.buy-page [hidden]{display:none}
+</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="buy.html" class="on">Купить</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795463940000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+<script>(function(){
+const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
+// (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
+// next measurement — the label says so; the local copy (file:) is rebuilt after every measurement, once a minute
+const what=loc?'цен':'сайта';if(!loc)el.title='Цены замеряются каждые '+el.dataset.step+' мин, на этот сайт выкладываются раз в '+el.dataset.stepSite+' мин (ограничение GitHub Pages). Самые свежие — в таблице на компьютере со сканером.';
+const next=last+step;
+const hm=t=>new Date(t).toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});
+const mmss=ms=>{ms=Math.max(0,ms);const m=Math.floor(ms/6e4),s=Math.floor(ms%6e4/1e3);return m+':'+String(s).padStart(2,'0')};
+let checking=false,lastCheck=loc?Date.now():0,note=el.dataset.note||'';
+async function check(){if(checking||Date.now()-lastCheck<6e4)return;checking=true;lastCheck=Date.now();
+ try{if(location.protocol==='file:'){location.reload();return}
+  const r=await fetch('version.json?t='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw new Error('version unavailable');
+  const versions=await r.json(),page=location.pathname.split('/').pop()||'index.html';
+  if(versions[page])note=String(versions[page].note||'');
+  if(versions[page]?.last>last)location.replace(location.pathname+'?t='+Date.now());}catch(e){}
+ checking=false}
+function tick(){const now=Date.now(),due=next+LAG;
+ if(now<next){el.className='timer';tx.innerHTML='Следующее обновление '+what+' через <b>'+mmss(next-now)+'</b> · в '+hm(next)+(loc?'':' · цены — каждую минуту')}
+ else if(now<due+12*6e4){el.className='timer wait';tx.innerHTML=(loc?'Идёт замер цен':'Сайт обновляется')+', страница обновится сама ('+(loc?'замер':'обновление')+' в '+hm(next)+')';if(now>=due)check()}
+ else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
+tick();setInterval(tick,1000)})();</script></nav>
+<main class="buy-page"><h1>Купить</h1>
+<p class="mut">Замер 2026-11-23 20:59 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
+
+<div class="buy-list"></div>
+<p class="buy-empty" id="buy-empty">В последнем замере ни один лот не прошёл условия покупки.</p>
+
+</main></body></html>
