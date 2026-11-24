@@ -63,20 +63,95 @@ body:not(.more) .x{display:none}
 @media (max-width:700px){.m{display:none!important}body{padding:12px}h1{font-size:18px}.cards{grid-template-columns:1fr 1fr;gap:8px}.card .v{font-size:19px}.thumb,.caret,.why,.chg,.hint{display:none!important}.seg{flex-wrap:wrap;width:100%}.seg button{padding:5px 8px;font-size:12px}input[type=search]{min-width:0;width:100%}td,th{padding:6px 6px}td:nth-child(2){white-space:normal;min-width:120px}.gun{font-size:13px;line-height:1.25}.pill{padding:2px 6px;font-size:10px}.big{font-size:14px}.wrap{max-height:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media (max-width:900px){.det-grid{grid-template-columns:1fr}.hint{display:none}}
-nav.top{display:flex;gap:6px;align-items:center;margin:0 0 14px;flex-wrap:wrap}
-nav.top a{text-decoration:none;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:13px}
-nav.top a:hover{color:var(--fg)}nav.top a.on{color:var(--fg);font-weight:600;border-color:var(--mut)}
-nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
-.timer{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--mut)}
-.timer b{color:var(--fg);font-variant-numeric:tabular-nums}.timer .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
-.timer.wait .dot{background:#eab308}.timer.late .dot{background:#ef4444}
-.buy-page{max-width:960px}.buy-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px}
-.buy-item,.buy-empty{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
-.buy-item h2{font-size:17px;margin:0;overflow-wrap:anywhere}.buy-item .venue{margin:3px 0 12px;color:var(--mut)}
-.buy-item dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}.buy-item dt{font-size:12px;color:var(--mut)}
-.buy-item dd{font-weight:650;margin:2px 0}.buy-item p:last-child{font-size:12px;margin:12px 0 0}
+:root {
+  color-scheme: light dark;
+  --bg: #f2f5f8; --card: #fff; --fg: #142735; --mut: #516572; --line: #d5dfe4;
+  --head: #edf3f5; --accent: #006d67; --accent-soft: #e0f4ee; --pos: #08764d; --neg: #b53e3c;
+  --mast: #122b36; --mast-ink: #e8f2f3; --mint: #86e6cb;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #101a20; --card: #18252e; --fg: #e8f0f2; --mut: #adc0c9; --line: #344650;
+    --head: #1e303a; --accent: #89e2c8; --accent-soft: #234139; --pos: #81deb1; --neg: #ffa49a;
+    --mast: #142a34; }
+}
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 1680px; padding: clamp(12px,2.3vw,38px); background: var(--bg);
+  color: var(--fg); font: 16px/1.47 "Inter", "Segoe UI", system-ui, sans-serif; }
+h1 { margin: 0; font-size: clamp(1.75rem,3.2vw,2.75rem); line-height: 1.12; letter-spacing: -.035em; }
+h2 { font-size: 1.25rem; line-height: 1.25; margin: 26px 0 10px; }
+nav.top { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; margin: 0 0 clamp(20px,3vw,38px);
+  padding: 12px 18px; border-radius: 16px; background: var(--mast); color: var(--mast-ink); }
+.brand { display: inline-flex; align-items: center; gap: 9px; font-size: 1.07rem; font-weight: 730; white-space: nowrap; }
+.brand-mark { display: inline-block; width: 28px; height: 28px; border-radius: 8px; background-color: var(--mint);
+  background-image: linear-gradient(#17483e,#17483e),linear-gradient(#17483e,#17483e),linear-gradient(#17483e,#17483e);
+  background-size: 3px 7px,3px 11px,3px 15px; background-position: 7px 15px,12px 11px,17px 7px; background-repeat: no-repeat; }
+.nav-links { display: flex; align-items: center; gap: 3px; flex-wrap: wrap; }
+.nav-links a { display: inline-block; padding: 8px 12px; border-radius: 8px; color: #cbdce1;
+  font-weight: 560; font-size: .9rem; text-decoration: none; }
+.nav-links a:hover { color: white; background: #294652; }
+.nav-links a.on { color: #10372e; background: var(--mint); }
+nav .timer, nav .upd { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; color: #c5d5da;
+  font-size: .8rem; font-variant-numeric: tabular-nums; }
+.timer b { color: #fff; }
+.timer .dot { width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%; background: var(--mint); }
+.timer.wait .dot { background: #ffd47c; } .timer.late .dot { background: #ff9b91; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+nav :focus-visible { outline-color: var(--mint); }
+.market-intro { display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.buy-link { display: inline-flex; align-items: center; min-height: 42px; padding: 8px 16px; text-decoration: none;
+  color: var(--card); background: var(--accent); font-weight: 650; border-radius: 9px; font-size: .94rem; }
+.buy-link:hover { text-decoration: underline; }
+.meta { margin-top: 9px; font-size: .91rem; } .meta .fresh { text-underline-offset: 3px; }
+.cards { gap: 12px; margin: 20px 0 24px; }
+.card, .wrap { border-radius: 14px; }
+.cards .card { padding: 15px 17px; min-width: 0; }
+.cards .k { color: var(--mut); font-size: .86rem; font-weight: 600; }
+.cards .v { margin: 5px 0; font-size: clamp(1.4rem,2.2vw,1.95rem); letter-spacing: -.03em; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.cards .s { font-size: .81rem; line-height: 1.35; overflow-wrap: anywhere; }
+.market-summary > summary { display: none; }
+@media (max-width: 760px) {
+  .market-summary { margin: 12px 0; }
+  .market-summary > summary { display: list-item; cursor: pointer; padding: 10px 12px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 9px; font-size: .9rem; font-weight: 650; }
+  .market-summary > summary span { display: inline-block; margin-left: 7px; font-size: .79rem; color: var(--mut); font-weight: 400; }
+}
+.skin-section { margin: 20px 0 10px; }
+.market-controls { padding: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+.market-controls input { font-size: .94rem; min-height: 40px; }
+.market-controls .seg { border: 0; gap: 3px; flex-wrap: wrap; }
+.market-controls .seg button { padding: 7px 10px; border-radius: 7px; font-size: .86rem; }
+.market-controls .seg button.on { color: var(--accent); background: var(--accent-soft); }
+.market-controls button:focus-visible { outline: 2px solid var(--accent); }
+.wrap { scrollbar-color: var(--mut) var(--head); }
+th { font-size: .82rem; } td { font-size: .9rem; } .sub, .wear { font-size: .78rem; }
+.wrap tbody tr.main:nth-of-type(4n+1) { background: color-mix(in srgb,var(--head) 25%,transparent); }
+@media (max-width: 760px) {
+  body { padding: 12px; } nav.top { padding: 12px; gap: 10px; align-items: flex-start; }
+  nav .timer, nav .upd { flex: 1; justify-content: flex-end; text-align: right; font-size: .76rem; }
+  .nav-links { order: 1; width: 100%; flex-wrap: wrap; gap: 2px; border-top: 1px solid #38515b; padding-top: 7px; }
+  .nav-links a { font-size: .86rem; padding: 7px 9px; }
+  .cards { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin: 16px 0; }
+  .cards .card { padding: 12px; } .market-intro { gap: 10px; }
+  .market-controls { gap: 6px; } .market-controls input { width: 100%; }
+  .market-controls .seg { width: 100%; } .market-controls .seg button { padding: 7px 8px; }
+}
+
+.buy-page { max-width: 1120px; }
+.buy-page > .mut { max-width: 76ch; }
+.buy-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,360px),1fr)); gap: 16px; margin-top: 20px; }
+.buy-item,.buy-empty { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: clamp(16px,2vw,26px); }
+.buy-item { border-top: 4px solid var(--accent); max-width: 660px; }
+.buy-item h2 { font-size: 1.3rem; margin: 7px 0 16px; overflow-wrap: anywhere; }
+.buy-item .venue { color: var(--accent); font-size: .88rem; font-weight: 650; margin: 0; }
+.buy-item dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin: 0; }
+.buy-item dl div { border-top: 1px solid var(--line); padding-top: 10px; }
+.buy-item dt { font-size: .87rem; color: var(--mut); }
+.buy-item dd { margin: 3px 0 0; font-size: 1.35rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.buy-item dl div:nth-child(n+3) dd { color: var(--pos); }
+.buy-item p:last-child { margin: 18px 0 0; font-size: .87rem; }
+.buy-empty { color: var(--mut); }
 .buy-page [hidden]{display:none}
-</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="buy.html" class="on">Купить</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795548060000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+</style></head><body><nav class="top" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html">Таблица</a><a href="buy.html" class="on" aria-current="page">Купить</a><a href="bot.html">Симулятор</a><a href="paper.html">Проверка сигналов</a><a href="timing.html">Время продажи</a></div><span class="timer" id="tmr" data-last="1795548660000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -99,15 +174,15 @@ function tick(){const now=Date.now(),due=next+LAG;
  else if(now<due+12*6e4){el.className='timer wait';tx.innerHTML=(loc?'Идёт замер цен':'Сайт обновляется')+', страница обновится сама ('+(loc?'замер':'обновление')+' в '+hm(next)+')';if(now>=due)check()}
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
-<main class="buy-page"><h1>Купить</h1>
-<p class="mut">Замер 2026-11-24 20:21 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
+<main class="buy-page"><h1>Лоты для покупки</h1>
+<p class="mut">Замер 2026-11-24 20:31 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
 <p>Цена лота и предел покупки указаны до комиссии пополнения. В марже учтены пополнение, продажа и вывод.</p>
-<div class="buy-list"><article class="buy-item" data-expires="1795548720000" hidden>
-    <h2>StatTrak™ AK-47 | Ice Coaled (Battle-Scarred)</h2><p class="venue">Lis-skins</p>
-    <dl><div><dt>Цена лота</dt><dd>644,87 ₽</dd></div>
-    <div><dt>Покупать до</dt><dd>652,18 ₽</dd></div>
-    <div><dt>Расчётная маржа</dt><dd>+3,69%</dd></div>
-    <div><dt>При снижении цены</dt><dd>+1,2%</dd></div></dl>
+<div class="buy-list"><article class="buy-item" data-expires="1795549380000" hidden>
+    <p class="venue">Lis-skins</p><h2>StatTrak™ AK-47 | Ice Coaled (Battle-Scarred)</h2>
+    <dl><div><dt>Цена лота</dt><dd>644,75 ₽</dd></div>
+    <div><dt>Предел покупки</dt><dd>652,18 ₽</dd></div>
+    <div><dt>Расчётная маржа</dt><dd>+3,71%</dd></div>
+    <div><dt>Маржа при снижении цены</dt><dd>+1,22%</dd></div></dl>
     <p class="mut">Продаж на MC за неделю: 425 · Оборот: около 9,29 дн.</p>
   </article></div>
 <p class="buy-empty" id="buy-empty" hidden>Срок действия котировок истёк. Ждём свежие цены.</p>
