@@ -12,11 +12,11 @@ td{padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;verti
 
 :root {
   color-scheme: dark;
-  --bg: #101a20; --card: #18252e; --fg: #e8f0f2; --mut: #adc0c9; --line: #344650;
-  --head: #1e303a; --accent: #89e2c8; --accent-soft: #234139; --pos: #81deb1; --neg: #ffa49a;
-  --mast: #142a34; --mast-ink: #e8f2f3; --mint: #86e6cb; --midc: #facc15;
-  --buy: #14532d; --buyf: #bbf7d0; --watch: #422006; --watchf: #fde68a;
-  --no: #26262b; --nof: #c7cbd0;
+  --bg: #000000; --card: #111111; --fg: #f4f4f4; --mut: #b7b7b7; --line: #353535;
+  --head: #1b1b1b; --accent: #eeeeee; --accent-soft: #323232; --pos: #81deb1; --neg: #ffa49a;
+  --mast: #141414; --mast-ink: #f0f0f0; --highlight: #e5e5e5; --midc: #facc15;
+  --buy: #1d2921; --buyf: #bbf7d0; --watch: #30291b; --watchf: #fde68a;
+  --no: #252525; --nof: #cccccc;
   --c1: #60a5fa; --c2: #a78bfa; --c3: #4ade80; --c4: #fb923c; --c5: #22d3ee;
 }
 * { box-sizing: border-box; }
@@ -27,21 +27,21 @@ h2 { font-size: 1.25rem; line-height: 1.25; margin: 26px 0 10px; }
 nav.top { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; margin: 0 0 clamp(20px,3vw,38px);
   padding: 12px 18px; border-radius: 16px; background: var(--mast); color: var(--mast-ink); }
 .brand { display: inline-flex; align-items: center; gap: 9px; font-size: 1.07rem; font-weight: 730; white-space: nowrap; }
-.brand-mark { display: inline-block; width: 28px; height: 28px; border-radius: 8px; background-color: var(--mint);
-  background-image: linear-gradient(#17483e,#17483e),linear-gradient(#17483e,#17483e),linear-gradient(#17483e,#17483e);
+.brand-mark { display: inline-block; width: 28px; height: 28px; border-radius: 8px; background-color: var(--highlight);
+  background-image: linear-gradient(#171717,#171717),linear-gradient(#171717,#171717),linear-gradient(#171717,#171717);
   background-size: 3px 7px,3px 11px,3px 15px; background-position: 7px 15px,12px 11px,17px 7px; background-repeat: no-repeat; }
 .nav-links { display: flex; align-items: center; gap: 3px; flex-wrap: wrap; }
-.nav-links a { display: inline-block; padding: 8px 12px; border-radius: 8px; color: #cbdce1;
+.nav-links a { display: inline-block; padding: 8px 12px; border-radius: 8px; color: #cccccc;
   font-weight: 560; font-size: .9rem; text-decoration: none; }
-.nav-links a:hover { color: white; background: #294652; }
-.nav-links a.on { color: #10372e; background: var(--mint); }
-nav .timer, nav .upd { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; color: #c5d5da;
+.nav-links a:hover { color: white; background: #303030; }
+.nav-links a.on { color: #121212; background: var(--highlight); }
+nav .timer, nav .upd { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; color: #c1c1c1;
   font-size: .8rem; font-variant-numeric: tabular-nums; }
 .timer b { color: #fff; }
-.timer .dot { width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%; background: var(--mint); }
+.timer .dot { width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%; background: var(--highlight); }
 .timer.wait .dot { background: #ffd47c; } .timer.late .dot { background: #ff9b91; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-nav :focus-visible { outline-color: var(--mint); }
+nav :focus-visible { outline-color: var(--highlight); }
 .market-intro { display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 .buy-link { display: inline-flex; align-items: center; min-height: 42px; padding: 8px 16px; text-decoration: none;
   color: var(--card); background: var(--accent); font-weight: 650; border-radius: 9px; font-size: .94rem; }
@@ -52,6 +52,7 @@ nav :focus-visible { outline-color: var(--mint); }
 .cards .card { padding: 15px 17px; min-width: 0; }
 .cards .k { color: var(--mut); font-size: .86rem; font-weight: 600; }
 .cards .v { margin: 5px 0; font-size: clamp(1.4rem,2.2vw,1.95rem); letter-spacing: -.03em; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.market-summary .cards .v.pos { color: var(--fg); }
 .cards .s { font-size: .81rem; line-height: 1.35; overflow-wrap: anywhere; }
 .market-summary > summary { display: none; }
 @media (max-width: 760px) {
@@ -73,14 +74,14 @@ th { font-size: .82rem; } td { font-size: .9rem; } .sub, .wear { font-size: .78r
 @media (max-width: 760px) {
   body { padding: 12px; } nav.top { padding: 12px; gap: 10px; align-items: flex-start; }
   nav .timer, nav .upd { flex: 1; justify-content: flex-end; text-align: right; font-size: .76rem; }
-  .nav-links { order: 1; width: 100%; flex-wrap: wrap; gap: 2px; border-top: 1px solid #38515b; padding-top: 7px; }
+  .nav-links { order: 1; width: 100%; flex-wrap: wrap; gap: 2px; border-top: 1px solid #3a3a3a; padding-top: 7px; }
   .nav-links a { font-size: .86rem; padding: 7px 9px; }
   .cards { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin: 16px 0; }
   .cards .card { padding: 12px; } .market-intro { gap: 10px; }
   .market-controls { gap: 6px; } .market-controls input { width: 100%; }
   .market-controls .seg { width: 100%; } .market-controls .seg button { padding: 7px 8px; }
 }
-</style></head><body><nav class="top" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html">Таблица</a><a href="buy.html">Купить</a><a href="bot.html" class="on" aria-current="page">Симулятор</a><a href="paper.html">Проверка сигналов</a><a href="timing.html">Время продажи</a></div><span class="timer" id="tmr" data-last="1795548840000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+</style></head><body><nav class="top" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html">Таблица</a><a href="buy.html">Купить</a><a href="bot.html" class="on" aria-current="page">Симулятор</a><a href="paper.html">Проверка сигналов</a><a href="timing.html">Время продажи</a></div><span class="timer" id="tmr" data-last="1795549020000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -104,16 +105,16 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Бот: конвейер (учебный режим)</h1>
-<div class="mut">Последний обработанный замер: <b>2026-11-24 20:34</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
+<div class="mut">Последний обработанный замер: <b>2026-11-24 20:37</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
 <div class="cards">
 <div class="card"><div class="k">Капитал по себестоимости</div><div class="v">69 119 ₽</div><div class="s">вложено 69 000 ₽ · деньги 211 ₽</div></div>
-<div class="card"><div class="k">Оценка портфеля по ценам выхода</div><div class="v">69 337 ₽</div><div class="s">Деньги и открытые позиции после комиссий. Цена может измениться до продажи.</div></div>
+<div class="card"><div class="k">Оценка портфеля по ценам выхода</div><div class="v">69 341 ₽</div><div class="s">Деньги и открытые позиции после комиссий. Цена может измениться до продажи.</div></div>
 <div class="card"><div class="k">Бюджет</div><div class="v">без ограничения</div><div class="s">с 17.11 — нехватка денег добавляется пополнением</div></div>
 <div class="card"><div class="k">В работе</div><div class="v">97 шт</div><div class="s">48 ждут разблокировку, 4 выставлены</div></div>
 <div class="card"><div class="k">Прибыль закрытых сделок</div><div class="v pos">119 ₽</div><div class="s">продано позиций: 5</div></div>
 </div>
 <div class="mut">Старт 12.11 11:51: 4 346 ₽ · 16.11 06:40: +10 654 ₽ (бюджет бота поднят до 15 000 ₽ по решению пользователя) · 16.11 10:14: +35 000 ₽ (бюджет бота поднят до 50 000 ₽ по решению пользователя) · без лимита (с 17.11): +19 000 ₽ пополнениями по мере нужды (13)</div>
-<div class="note">Сейчас не покупает: подходящие лоты (Aim, Lis) уже куплены, ждёт новых (24.11 20:35).</div>
+<div class="note">Сейчас не покупает: подходящие лоты (Aim, Lis) уже куплены, ждёт новых (24.11 20:38).</div>
 <h2>По неделям</h2>
 <div class="wrap"><table><thead><tr><th>Неделя с</th><th class="n">Куплено, шт</th><th class="n">На сумму</th><th class="n">Продано, шт</th><th class="n">Прибыль</th><th class="n">% к вложенному в проданное</th></tr></thead><tbody>
 <tr><td>23.11.2026</td><td class="n">5</td><td class="n">3 280 ₽</td><td class="n">2</td><td class="n pos">0,07 ₽</td><td class="n">+0,0%</td></tr><tr><td>16.11.2026</td><td class="n">93</td><td class="n">66 489 ₽</td><td class="n">7</td><td class="n pos">119 ₽</td><td class="n">+13,0%</td></tr><tr><td>09.11.2026</td><td class="n">8</td><td class="n">1 336 ₽</td><td class="n">0</td><td class="n ">—</td><td class="n">—</td></tr>
