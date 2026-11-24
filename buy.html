@@ -76,7 +76,7 @@ nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
 .buy-item dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}.buy-item dt{font-size:12px;color:var(--mut)}
 .buy-item dd{font-weight:650;margin:2px 0}.buy-item p:last-child{font-size:12px;margin:12px 0 0}
 .buy-page [hidden]{display:none}
-</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="buy.html" class="on">Купить</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795508460000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="buy.html" class="on">Купить</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795509060000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -100,7 +100,7 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <main class="buy-page"><h1>Купить</h1>
-<p class="mut">Замер 2026-11-24 09:21 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
+<p class="mut">Замер 2026-11-24 09:31 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
 
 <div class="buy-list"></div>
 <p class="buy-empty" id="buy-empty">В последнем замере ни один лот не прошёл условия покупки.</p>
