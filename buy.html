@@ -76,7 +76,7 @@ nav.top .upd{margin-left:auto;font-size:12px;color:var(--mut)}
 .buy-item dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}.buy-item dt{font-size:12px;color:var(--mut)}
 .buy-item dd{font-weight:650;margin:2px 0}.buy-item p:last-child{font-size:12px;margin:12px 0 0}
 .buy-page [hidden]{display:none}
-</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="buy.html" class="on">Купить</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795532460000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+</style></head><body><nav class="top"><a href="table.html" class="">Таблица</a><a href="buy.html" class="on">Купить</a><a href="bot.html" class="">Бот</a><a href="paper.html" class="">Бумажные сделки</a><a href="timing.html" class="">Время продажи</a><span class="timer" id="tmr" data-last="1795533060000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -100,36 +100,9 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <main class="buy-page"><h1>Купить</h1>
-<p class="mut">Замер 2026-11-24 16:01 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
-<p>Цена лота и предел покупки указаны до комиссии пополнения. В марже учтены пополнение, продажа и вывод.</p>
-<div class="buy-list"><article class="buy-item" data-expires="1795533540000" hidden>
-    <h2>StatTrak™ AK-47 | Ice Coaled (Battle-Scarred)</h2><p class="venue">Lis-skins</p>
-    <dl><div><dt>Цена лота</dt><dd>650,35 ₽</dd></div>
-    <div><dt>Покупать до</dt><dd>650,39 ₽</dd></div>
-    <div><dt>Расчётная маржа</dt><dd>+3,49%</dd></div>
-    <div><dt>При снижении цены</dt><dd>+1,01%</dd></div></dl>
-    <p class="mut">Продаж на MC за неделю: 420 · Оборот: около 9,35 дн.</p>
-  </article></div>
-<p class="buy-empty" id="buy-empty" hidden>Срок действия котировок истёк. Ждём свежие цены.</p>
-<noscript><p>Включите JavaScript, чтобы увидеть лоты с действующими котировками.</p></noscript>
-<script>(function(){
-  const cards = Array.from(document.querySelectorAll('[data-expires]'));
-  const empty = document.getElementById('buy-empty');
-  let timer;
-  function refresh(){
-    clearTimeout(timer);
-    const now=Date.now();
-    let next=Infinity;
-    for(const card of cards){
-      const until=Number(card.dataset.expires);
-      card.hidden=!(until>now);
-      if(!card.hidden) next=Math.min(next,until);
-    }
-    empty.hidden=Number.isFinite(next);
-    if(empty.hidden) timer=setTimeout(refresh,next-now+1);
-  }
-  refresh();
-  document.addEventListener('visibilitychange',refresh);
-  window.addEventListener('pageshow',refresh);
-})();</script>
+<p class="mut">Замер 2026-11-24 16:11 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
+
+<div class="buy-list"></div>
+<p class="buy-empty" id="buy-empty">В последнем замере ни один лот не прошёл условия покупки.</p>
+
 </main></body></html>
