@@ -64,15 +64,13 @@ body:not(.more) .x{display:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media (max-width:900px){.det-grid{grid-template-columns:1fr}.hint{display:none}}
 :root {
-  color-scheme: light dark;
-  --bg: #f2f5f8; --card: #fff; --fg: #142735; --mut: #516572; --line: #d5dfe4;
-  --head: #edf3f5; --accent: #006d67; --accent-soft: #e0f4ee; --pos: #08764d; --neg: #b53e3c;
-  --mast: #122b36; --mast-ink: #e8f2f3; --mint: #86e6cb;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #101a20; --card: #18252e; --fg: #e8f0f2; --mut: #adc0c9; --line: #344650;
-    --head: #1e303a; --accent: #89e2c8; --accent-soft: #234139; --pos: #81deb1; --neg: #ffa49a;
-    --mast: #142a34; }
+  color-scheme: dark;
+  --bg: #101a20; --card: #18252e; --fg: #e8f0f2; --mut: #adc0c9; --line: #344650;
+  --head: #1e303a; --accent: #89e2c8; --accent-soft: #234139; --pos: #81deb1; --neg: #ffa49a;
+  --mast: #142a34; --mast-ink: #e8f2f3; --mint: #86e6cb; --midc: #facc15;
+  --buy: #14532d; --buyf: #bbf7d0; --watch: #422006; --watchf: #fde68a;
+  --no: #26262b; --nof: #c7cbd0;
+  --c1: #60a5fa; --c2: #a78bfa; --c3: #4ade80; --c4: #fb923c; --c5: #22d3ee;
 }
 * { box-sizing: border-box; }
 body { margin: 0 auto; max-width: 1680px; padding: clamp(12px,2.3vw,38px); background: var(--bg);
@@ -151,7 +149,7 @@ th { font-size: .82rem; } td { font-size: .9rem; } .sub, .wear { font-size: .78r
 .buy-item p:last-child { margin: 18px 0 0; font-size: .87rem; }
 .buy-empty { color: var(--mut); }
 .buy-page [hidden]{display:none}
-</style></head><body><nav class="top" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html">Таблица</a><a href="buy.html" class="on" aria-current="page">Купить</a><a href="bot.html">Симулятор</a><a href="paper.html">Проверка сигналов</a><a href="timing.html">Время продажи</a></div><span class="timer" id="tmr" data-last="1795548660000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+</style></head><body><nav class="top" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html">Таблица</a><a href="buy.html" class="on" aria-current="page">Купить</a><a href="bot.html">Симулятор</a><a href="paper.html">Проверка сигналов</a><a href="timing.html">Время продажи</a></div><span class="timer" id="tmr" data-last="1795548840000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -175,15 +173,15 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <main class="buy-page"><h1>Лоты для покупки</h1>
-<p class="mut">Замер 2026-11-24 20:31 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
+<p class="mut">Замер 2026-11-24 20:34 · Порог маржи после комиссий: 3% по обычной цене выхода и 1% при неблагоприятной продаже.</p>
 <p>Цена лота и предел покупки указаны до комиссии пополнения. В марже учтены пополнение, продажа и вывод.</p>
-<div class="buy-list"><article class="buy-item" data-expires="1795549380000" hidden>
+<div class="buy-list"><article class="buy-item" data-expires="1795550040000" hidden>
     <p class="venue">Lis-skins</p><h2>StatTrak™ AK-47 | Ice Coaled (Battle-Scarred)</h2>
-    <dl><div><dt>Цена лота</dt><dd>644,75 ₽</dd></div>
+    <dl><div><dt>Цена лота</dt><dd>644,88 ₽</dd></div>
     <div><dt>Предел покупки</dt><dd>652,18 ₽</dd></div>
-    <div><dt>Расчётная маржа</dt><dd>+3,71%</dd></div>
-    <div><dt>Маржа при снижении цены</dt><dd>+1,22%</dd></div></dl>
-    <p class="mut">Продаж на MC за неделю: 425 · Оборот: около 9,29 дн.</p>
+    <div><dt>Расчётная маржа</dt><dd>+3,69%</dd></div>
+    <div><dt>Маржа при снижении цены</dt><dd>+1,2%</dd></div></dl>
+    <p class="mut">Продаж на MC за неделю: 425 · Оборот: около 9,3 дн.</p>
   </article></div>
 <p class="buy-empty" id="buy-empty" hidden>Срок действия котировок истёк. Ждём свежие цены.</p>
 <noscript><p>Включите JavaScript, чтобы увидеть лоты с действующими котировками.</p></noscript>
