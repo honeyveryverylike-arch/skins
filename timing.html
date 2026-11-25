@@ -92,7 +92,7 @@ th { font-size: .82rem; } td { font-size: .9rem; } .sub, .wear { font-size: .78r
   .market-controls .seg { width: 100%; } .market-controls .seg button { padding: 7px 8px; }
 }
 </style></head><body>
-<nav class="top" data-section="timing" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html?theme=black2">Таблица</a><a href="buy.html?theme=black2">Купить</a><a href="bot.html?theme=black2">Симулятор</a><a href="paper.html?theme=black2">Проверка сигналов</a><a href="timing.html?theme=black2" class="on" aria-current="page">Время продажи</a></div><span class="timer" id="tmr" data-last="1795576860000" data-step="10" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+<nav class="top" data-section="timing" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html?theme=black2">Таблица</a><a href="buy.html?theme=black2">Купить</a><a href="bot.html?theme=black2">Симулятор</a><a href="paper.html?theme=black2">Проверка сигналов</a><a href="timing.html?theme=black2" class="on" aria-current="page">Время продажи</a></div><span class="timer" id="tmr" data-last="1795577460000" data-step="10" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -116,7 +116,7 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Когда выгоднее продавать на Market.CSGO</h1>
-<div class="mut">Последний замер: <b>2026-11-25 04:21</b> · всего замеров: 3210 · скинов: 314 · время — по часам твоего компьютера</div>
+<div class="mut">Последний замер: <b>2026-11-25 04:31</b> · всего замеров: 3220 · скинов: 314 · время — по часам твоего компьютера</div>
 <h2>По реальным продажам на Market.CSGO</h2>
 <div class="card"><p class="big">Продавать выгоднее всего вечером: около <b class="pos">18:00, 19:00, 20:00, 21:00</b> — в эти часы сделки проходят ближе всего к дневной цене, и покупателей больше всего (пик продаж около 17:00, 18:00, 19:00, 20:00).
 Хуже всего ночью, около <b class="neg">04:00, 05:00, 06:00</b>: продаж мало, и проходят они в среднем на 1,5% дешевле.</p>
@@ -179,102 +179,102 @@ tick();setInterval(tick,1000)})();</script></nav>
 <h2>По часам суток</h2>
 <div class="wrap"><table><thead><tr><th>Час</th><th class="v">Цена на MC</th><th></th><th class="v">Лотов на MC</th><th></th><th class="n">Замеров / дней</th><th>Что это значит</th></tr></thead>
 <tbody><tr class=""><td><b>00:00</b></td>
-<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.6%;left:50%"></i></div></td>
-<td class="v">−1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:6.1%;right:50%"></i></div></td>
+<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.8%;left:50%"></i></div></td>
+<td class="v">−1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:6.2%;right:50%"></i></div></td>
 <td class="n">140 / 15 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>01:00</b></td>
-<td class="v">+1,4%</td><td class="bc"><div class="bar"><i class="g" style="width:21.6%;left:50%"></i></div></td>
+<td class="v">+1,4%</td><td class="bc"><div class="bar"><i class="g" style="width:21.8%;left:50%"></i></div></td>
 <td class="v">−3,2%</td><td class="bc"><div class="bar"><i class="g" style="width:15.9%;right:50%"></i></div></td>
 <td class="n">133 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>02:00</b></td>
-<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:18.4%;left:50%"></i></div></td>
-<td class="v">−2,2%</td><td class="bc"><div class="bar"><i class="g" style="width:11.0%;right:50%"></i></div></td>
+<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:18.6%;left:50%"></i></div></td>
+<td class="v">−2,2%</td><td class="bc"><div class="bar"><i class="g" style="width:11.1%;right:50%"></i></div></td>
 <td class="n">132 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>03:00</b></td>
-<td class="v">+0,7%</td><td class="bc"><div class="bar"><i class="g" style="width:11.2%;left:50%"></i></div></td>
-<td class="v">−1,4%</td><td class="bc"><div class="bar"><i class="g" style="width:7.3%;right:50%"></i></div></td>
+<td class="v">+0,7%</td><td class="bc"><div class="bar"><i class="g" style="width:11.5%;left:50%"></i></div></td>
+<td class="v">−1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:7.4%;right:50%"></i></div></td>
 <td class="n">134 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>04:00</b></td>
-<td class="v">+0,9%</td><td class="bc"><div class="bar"><i class="g" style="width:14.5%;left:50%"></i></div></td>
-<td class="v">−3,5%</td><td class="bc"><div class="bar"><i class="g" style="width:17.7%;right:50%"></i></div></td>
-<td class="n">148 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>05:00</b></td>
-<td class="v">+0,7%</td><td class="bc"><div class="bar"><i class="g" style="width:10.5%;left:50%"></i></div></td>
+<td class="v">+0,8%</td><td class="bc"><div class="bar"><i class="g" style="width:12.3%;left:50%"></i></div></td>
+<td class="v">−3,2%</td><td class="bc"><div class="bar"><i class="g" style="width:16.1%;right:50%"></i></div></td>
+<td class="n">158 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>05:00</b></td>
+<td class="v">+0,7%</td><td class="bc"><div class="bar"><i class="g" style="width:10.8%;left:50%"></i></div></td>
 <td class="v">−4,4%</td><td class="bc"><div class="bar"><i class="g" style="width:22.1%;right:50%"></i></div></td>
 <td class="n">129 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>06:00</b></td>
-<td class="v">+0,6%</td><td class="bc"><div class="bar"><i class="g" style="width:9.0%;left:50%"></i></div></td>
+<td class="v">+0,6%</td><td class="bc"><div class="bar"><i class="g" style="width:9.2%;left:50%"></i></div></td>
 <td class="v">−2,2%</td><td class="bc"><div class="bar"><i class="g" style="width:11.2%;right:50%"></i></div></td>
 <td class="n">132 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>07:00</b></td>
-<td class="v">+0,8%</td><td class="bc"><div class="bar"><i class="g" style="width:12.9%;left:50%"></i></div></td>
-<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="g" style="width:2.8%;right:50%"></i></div></td>
+<td class="v">+0,8%</td><td class="bc"><div class="bar"><i class="g" style="width:13.1%;left:50%"></i></div></td>
+<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="g" style="width:2.7%;right:50%"></i></div></td>
 <td class="n">134 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>08:00</b></td>
-<td class="v">+1,3%</td><td class="bc"><div class="bar"><i class="g" style="width:21.4%;left:50%"></i></div></td>
+<td class="v">+1,4%</td><td class="bc"><div class="bar"><i class="g" style="width:21.6%;left:50%"></i></div></td>
 <td class="v">+0,6%</td><td class="bc"><div class="bar"><i class="r" style="width:2.8%;left:50%"></i></div></td>
 <td class="n">134 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>09:00</b></td>
-<td class="v">+1,7%</td><td class="bc"><div class="bar"><i class="g" style="width:26.6%;left:50%"></i></div></td>
+<td class="v">+1,7%</td><td class="bc"><div class="bar"><i class="g" style="width:26.7%;left:50%"></i></div></td>
 <td class="v">+1,0%</td><td class="bc"><div class="bar"><i class="r" style="width:5.1%;left:50%"></i></div></td>
 <td class="n">134 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>10:00</b></td>
-<td class="v">+1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:24.6%;left:50%"></i></div></td>
-<td class="v">+2,7%</td><td class="bc"><div class="bar"><i class="r" style="width:13.8%;left:50%"></i></div></td>
+<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:24.7%;left:50%"></i></div></td>
+<td class="v">+2,7%</td><td class="bc"><div class="bar"><i class="r" style="width:13.7%;left:50%"></i></div></td>
 <td class="n">132 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>11:00</b></td>
-<td class="v">+1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:24.4%;left:50%"></i></div></td>
+<td class="v">+1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:24.6%;left:50%"></i></div></td>
 <td class="v">+3,6%</td><td class="bc"><div class="bar"><i class="r" style="width:18.1%;left:50%"></i></div></td>
 <td class="n">134 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>12:00</b></td>
-<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:25.8%;left:50%"></i></div></td>
-<td class="v">+4,1%</td><td class="bc"><div class="bar"><i class="r" style="width:20.8%;left:50%"></i></div></td>
+<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:25.9%;left:50%"></i></div></td>
+<td class="v">+4,2%</td><td class="bc"><div class="bar"><i class="r" style="width:20.8%;left:50%"></i></div></td>
 <td class="n">132 / 13 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>13:00</b></td>
-<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:25.6%;left:50%"></i></div></td>
-<td class="v">+4,0%</td><td class="bc"><div class="bar"><i class="r" style="width:20.1%;left:50%"></i></div></td>
+<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:25.8%;left:50%"></i></div></td>
+<td class="v">+4,0%</td><td class="bc"><div class="bar"><i class="r" style="width:20.0%;left:50%"></i></div></td>
 <td class="n">131 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>14:00</b></td>
-<td class="v">+1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:24.4%;left:50%"></i></div></td>
-<td class="v">+5,8%</td><td class="bc"><div class="bar"><i class="r" style="width:28.9%;left:50%"></i></div></td>
+<td class="v">+1,5%</td><td class="bc"><div class="bar"><i class="g" style="width:24.6%;left:50%"></i></div></td>
+<td class="v">+5,8%</td><td class="bc"><div class="bar"><i class="r" style="width:28.8%;left:50%"></i></div></td>
 <td class="n">132 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>15:00</b></td>
-<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:25.6%;left:50%"></i></div></td>
-<td class="v">+7,7%</td><td class="bc"><div class="bar"><i class="r" style="width:38.7%;left:50%"></i></div></td>
+<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:25.7%;left:50%"></i></div></td>
+<td class="v">+7,7%</td><td class="bc"><div class="bar"><i class="r" style="width:38.6%;left:50%"></i></div></td>
 <td class="n">127 / 13 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>16:00</b></td>
-<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:26.0%;left:50%"></i></div></td>
-<td class="v">+8,7%</td><td class="bc"><div class="bar"><i class="r" style="width:43.5%;left:50%"></i></div></td>
+<td class="v">+1,6%</td><td class="bc"><div class="bar"><i class="g" style="width:26.2%;left:50%"></i></div></td>
+<td class="v">+8,7%</td><td class="bc"><div class="bar"><i class="r" style="width:43.3%;left:50%"></i></div></td>
 <td class="n">127 / 13 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>17:00</b></td>
-<td class="v">+1,0%</td><td class="bc"><div class="bar"><i class="g" style="width:16.0%;left:50%"></i></div></td>
-<td class="v">+7,6%</td><td class="bc"><div class="bar"><i class="r" style="width:38.3%;left:50%"></i></div></td>
+<td class="v">+1,0%</td><td class="bc"><div class="bar"><i class="g" style="width:16.2%;left:50%"></i></div></td>
+<td class="v">+7,6%</td><td class="bc"><div class="bar"><i class="r" style="width:38.2%;left:50%"></i></div></td>
 <td class="n">126 / 13 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>18:00</b></td>
-<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.1%;left:50%"></i></div></td>
-<td class="v">+6,8%</td><td class="bc"><div class="bar"><i class="r" style="width:34.1%;left:50%"></i></div></td>
+<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.4%;left:50%"></i></div></td>
+<td class="v">+6,8%</td><td class="bc"><div class="bar"><i class="r" style="width:34.0%;left:50%"></i></div></td>
 <td class="n">131 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>19:00</b></td>
-<td class="v">+1,4%</td><td class="bc"><div class="bar"><i class="g" style="width:22.1%;left:50%"></i></div></td>
-<td class="v">+6,3%</td><td class="bc"><div class="bar"><i class="r" style="width:31.8%;left:50%"></i></div></td>
+<td class="v">+1,4%</td><td class="bc"><div class="bar"><i class="g" style="width:22.3%;left:50%"></i></div></td>
+<td class="v">+6,3%</td><td class="bc"><div class="bar"><i class="r" style="width:31.7%;left:50%"></i></div></td>
 <td class="n">133 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>20:00</b></td>
-<td class="v">+1,3%</td><td class="bc"><div class="bar"><i class="g" style="width:20.7%;left:50%"></i></div></td>
-<td class="v">+7,1%</td><td class="bc"><div class="bar"><i class="r" style="width:35.9%;left:50%"></i></div></td>
+<td class="v">+1,3%</td><td class="bc"><div class="bar"><i class="g" style="width:20.9%;left:50%"></i></div></td>
+<td class="v">+7,1%</td><td class="bc"><div class="bar"><i class="r" style="width:35.7%;left:50%"></i></div></td>
 <td class="n">135 / 14 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>21:00</b></td>
-<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.6%;left:50%"></i></div></td>
-<td class="v">+6,9%</td><td class="bc"><div class="bar"><i class="r" style="width:34.8%;left:50%"></i></div></td>
+<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.8%;left:50%"></i></div></td>
+<td class="v">+6,9%</td><td class="bc"><div class="bar"><i class="r" style="width:34.6%;left:50%"></i></div></td>
 <td class="n">138 / 15 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>22:00</b></td>
-<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.5%;left:50%"></i></div></td>
-<td class="v">+6,8%</td><td class="bc"><div class="bar"><i class="r" style="width:34.2%;left:50%"></i></div></td>
+<td class="v">+1,2%</td><td class="bc"><div class="bar"><i class="g" style="width:19.7%;left:50%"></i></div></td>
+<td class="v">+6,8%</td><td class="bc"><div class="bar"><i class="r" style="width:34.0%;left:50%"></i></div></td>
 <td class="n">142 / 15 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>23:00</b></td>
-<td class="v">+1,0%</td><td class="bc"><div class="bar"><i class="g" style="width:16.1%;left:50%"></i></div></td>
-<td class="v">+5,5%</td><td class="bc"><div class="bar"><i class="r" style="width:27.8%;left:50%"></i></div></td>
+<td class="v">+1,0%</td><td class="bc"><div class="bar"><i class="g" style="width:16.4%;left:50%"></i></div></td>
+<td class="v">+5,5%</td><td class="bc"><div class="bar"><i class="r" style="width:27.6%;left:50%"></i></div></td>
 <td class="n">140 / 15 дней</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr></tbody></table></div>
 
 <h2>По дням недели</h2>
 <div class="wrap"><table><thead><tr><th>День недели</th><th class="v">Цена на MC</th><th></th><th class="v">Лотов на MC</th><th></th><th class="n">Замеров / дней</th><th>Что это значит</th></tr></thead>
 <tbody><tr class=""><td><b>понедельник</b></td>
-<td class="v">+1,9%</td><td class="bc"><div class="bar"><i class="g" style="width:29.7%;left:50%"></i></div></td>
-<td class="v">+3,2%</td><td class="bc"><div class="bar"><i class="r" style="width:16.0%;left:50%"></i></div></td>
+<td class="v">+1,9%</td><td class="bc"><div class="bar"><i class="g" style="width:29.8%;left:50%"></i></div></td>
+<td class="v">+3,2%</td><td class="bc"><div class="bar"><i class="r" style="width:15.9%;left:50%"></i></div></td>
 <td class="n">263 / 2 дня</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>вторник</b></td>
-<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="g" style="width:1.9%;left:50%"></i></div></td>
-<td class="v">+3,6%</td><td class="bc"><div class="bar"><i class="r" style="width:18.2%;left:50%"></i></div></td>
+<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="g" style="width:2.2%;left:50%"></i></div></td>
+<td class="v">+3,6%</td><td class="bc"><div class="bar"><i class="r" style="width:18.0%;left:50%"></i></div></td>
 <td class="n">1371 / 3 дня</td><td>как обычно</td></tr><tr class=""><td><b>среда</b></td>
-<td class="v">+0,6%</td><td class="bc"><div class="bar"><i class="g" style="width:10.4%;left:50%"></i></div></td>
-<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:0.6%;left:50%"></i></div></td>
-<td class="n">441 / 3 дня</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>четверг</b></td>
-<td class="v">+2,4%</td><td class="bc"><div class="bar"><i class="g" style="width:38.9%;left:50%"></i></div></td>
+<td class="v">+0,6%</td><td class="bc"><div class="bar"><i class="g" style="width:9.8%;left:50%"></i></div></td>
+<td class="v">+0,1%</td><td class="bc"><div class="bar"><i class="r" style="width:0.7%;left:50%"></i></div></td>
+<td class="n">451 / 3 дня</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>четверг</b></td>
+<td class="v">+2,5%</td><td class="bc"><div class="bar"><i class="g" style="width:39.0%;left:50%"></i></div></td>
 <td class="v">+10,0%</td><td class="bc"><div class="bar"><i class="r" style="width:50.0%;left:50%"></i></div></td>
 <td class="n">272 / 2 дня</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>пятница</b></td>
 <td class="v">+2,7%</td><td class="bc"><div class="bar"><i class="g" style="width:42.9%;left:50%"></i></div></td>
 <td class="v">+5,8%</td><td class="bc"><div class="bar"><i class="r" style="width:29.2%;left:50%"></i></div></td>
 <td class="n">288 / 2 дня</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>суббота</b></td>
-<td class="v">+3,1%</td><td class="bc"><div class="bar"><i class="g" style="width:50.0%;left:50%"></i></div></td>
-<td class="v">−4,6%</td><td class="bc"><div class="bar"><i class="g" style="width:23.1%;right:50%"></i></div></td>
+<td class="v">+3,2%</td><td class="bc"><div class="bar"><i class="g" style="width:50.0%;left:50%"></i></div></td>
+<td class="v">−4,6%</td><td class="bc"><div class="bar"><i class="g" style="width:23.0%;right:50%"></i></div></td>
 <td class="n">288 / 2 дня</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr><tr class=""><td><b>воскресенье</b></td>
-<td class="v">+2,4%</td><td class="bc"><div class="bar"><i class="g" style="width:39.0%;left:50%"></i></div></td>
-<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="g" style="width:2.4%;right:50%"></i></div></td>
+<td class="v">+2,5%</td><td class="bc"><div class="bar"><i class="g" style="width:39.0%;left:50%"></i></div></td>
+<td class="v">−0,5%</td><td class="bc"><div class="bar"><i class="g" style="width:2.5%;right:50%"></i></div></td>
 <td class="n">287 / 2 дня</td><td><span class="pos">дороже обычного — хорошее время выставлять</span></td></tr></tbody></table></div>
 <div class="legend"><b>Цена на MC</b> — насколько минимальные лоты в этот час дороже (+) или дешевле (−) обычной цены скина. Обычная цена — медиана скина за всё время наблюдений; так дешёвые и дорогие скины весят одинаково.
 Зелёная полоска вправо — дороже обычного, продавать выгоднее.
