@@ -87,7 +87,7 @@ th { font-size: .82rem; } td { font-size: .9rem; } .sub, .wear { font-size: .78r
   .market-controls { gap: 6px; } .market-controls input { width: 100%; }
   .market-controls .seg { width: 100%; } .market-controls .seg button { padding: 7px 8px; }
 }
-</style></head><body><nav class="top" data-section="bot" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html?theme=black2">Таблица</a><a href="buy.html?theme=black2">Купить</a><a href="bot.html?theme=black2" class="on" aria-current="page">Симулятор</a><a href="paper.html?theme=black2">Проверка сигналов</a><a href="timing.html?theme=black2">Время продажи</a></div><span class="timer" id="tmr" data-last="1795600260000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+</style></head><body><nav class="top" data-section="bot" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html?theme=black2">Таблица</a><a href="buy.html?theme=black2">Купить</a><a href="bot.html?theme=black2" class="on" aria-current="page">Симулятор</a><a href="paper.html?theme=black2">Проверка сигналов</a><a href="timing.html?theme=black2">Время продажи</a></div><span class="timer" id="tmr" data-last="1795600860000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -111,16 +111,16 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Бот: конвейер (учебный режим)</h1>
-<div class="mut">Последний обработанный замер: <b>2026-11-25 10:51</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
+<div class="mut">Последний обработанный замер: <b>2026-11-25 11:01</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
 <div class="cards">
 <div class="card"><div class="k">Капитал по себестоимости</div><div class="v">75 141 ₽</div><div class="s">вложено 75 000 ₽ · деньги 538 ₽</div></div>
-<div class="card"><div class="k">Оценка портфеля по ценам выхода</div><div class="v">74 536 ₽</div><div class="s">Деньги и открытые позиции после комиссий. Цена может измениться до продажи.</div></div>
+<div class="card"><div class="k">Оценка портфеля по ценам выхода</div><div class="v">74 509 ₽</div><div class="s">Деньги и открытые позиции после комиссий. Цена может измениться до продажи.</div></div>
 <div class="card"><div class="k">Бюджет</div><div class="v">без ограничения</div><div class="s">с 17.11 — нехватка денег добавляется пополнением</div></div>
 <div class="card"><div class="k">В работе</div><div class="v">106 шт</div><div class="s">45 ждут разблокировку, 26 выставлены</div></div>
 <div class="card"><div class="k">Прибыль закрытых сделок</div><div class="v pos">141 ₽</div><div class="s">продано позиций: 6</div></div>
 </div>
 <div class="mut">Старт 12.11 11:51: 4 346 ₽ · 16.11 06:40: +10 654 ₽ (бюджет бота поднят до 15 000 ₽ по решению пользователя) · 16.11 10:14: +35 000 ₽ (бюджет бота поднят до 50 000 ₽ по решению пользователя) · без лимита (с 17.11): +25 000 ₽ пополнениями по мере нужды (18)</div>
-<div class="note">Сейчас не покупает: подходящие лоты (Aim, Lis) уже куплены, ждёт новых (25.11 10:52).</div>
+<div class="note">Сейчас не покупает: подходящие лоты (Aim, Lis) уже куплены, ждёт новых (25.11 11:02).</div>
 <h2>По неделям</h2>
 <div class="wrap"><table><thead><tr><th>Неделя с</th><th class="n">Куплено, шт</th><th class="n">На сумму</th><th class="n">Продано, шт</th><th class="n">Прибыль</th><th class="n">% к вложенному в проданное</th></tr></thead><tbody>
 <tr><td>23.11.2026</td><td class="n">25</td><td class="n">15 765 ₽</td><td class="n">13</td><td class="n pos">21,85 ₽</td><td class="n">+0,3%</td></tr><tr><td>16.11.2026</td><td class="n">93</td><td class="n">66 489 ₽</td><td class="n">7</td><td class="n pos">119 ₽</td><td class="n">+13,0%</td></tr><tr><td>09.11.2026</td><td class="n">8</td><td class="n">1 336 ₽</td><td class="n">0</td><td class="n ">—</td><td class="n">—</td></tr>
@@ -273,13 +273,13 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">172 ₽<div class="sub mut">не ниже 172 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 280 ₽<div class="sub mut">всего 1 280 ₽</div></td>
 <td>18.11 04:51</td><td>25.11 08:00</td><td class="n">1 463 ₽<div class="sub mut">прогноз +3,8%</div></td>
-<td class="n">1 479 ₽<div class="sub mut">не ниже 1 410 ₽</div></td>
+<td class="n">1 475 ₽<div class="sub mut">не ниже 1 410 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>AWP | Black Nile (Field-Tested)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">198 ₽<div class="sub mut">всего 198 ₽</div></td>
 <td>18.11 02:08</td><td>25.11 08:00</td><td class="n">225 ₽<div class="sub mut">прогноз +3,0%</div></td>
 <td class="n">218 ₽<div class="sub mut">не ниже 218 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 283 ₽<div class="sub mut">всего 1 283 ₽</div></td>
 <td>18.11 01:50</td><td>25.11 08:00</td><td class="n">1 463 ₽<div class="sub mut">прогноз +3,5%</div></td>
-<td class="n">1 479 ₽<div class="sub mut">не ниже 1 413 ₽</div></td>
+<td class="n">1 475 ₽<div class="sub mut">не ниже 1 413 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>AWP | Black Nile (Field-Tested)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">197 ₽<div class="sub mut">всего 197 ₽</div></td>
 <td>18.11 01:43</td><td>25.11 08:00</td><td class="n">224 ₽<div class="sub mut">прогноз +3,3%</div></td>
 <td class="n">217 ₽<div class="sub mut">не ниже 217 ₽</div></td>
@@ -291,16 +291,16 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">217 ₽<div class="sub mut">не ниже 217 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 284 ₽<div class="sub mut">всего 1 284 ₽</div></td>
 <td>17.11 21:41</td><td>25.11 08:00</td><td class="n">1 460 ₽<div class="sub mut">прогноз +3,3%</div></td>
-<td class="n">1 479 ₽<div class="sub mut">не ниже 1 414 ₽</div></td>
+<td class="n">1 475 ₽<div class="sub mut">не ниже 1 414 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>AWP | Duality (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">217 ₽<div class="sub mut">всего 217 ₽</div></td>
 <td>17.11 20:53</td><td>25.11 08:00</td><td class="n">247 ₽<div class="sub mut">прогноз +3,3%</div></td>
 <td class="n">239 ₽<div class="sub mut">не ниже 239 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 278 ₽<div class="sub mut">всего 1 278 ₽</div></td>
 <td>17.11 19:30</td><td>25.11 08:00</td><td class="n">1 460 ₽<div class="sub mut">прогноз +3,7%</div></td>
-<td class="n">1 479 ₽<div class="sub mut">не ниже 1 408 ₽</div></td>
+<td class="n">1 475 ₽<div class="sub mut">не ниже 1 408 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 281 ₽<div class="sub mut">всего 1 281 ₽</div></td>
 <td>17.11 18:52</td><td>25.11 08:00</td><td class="n">1 460 ₽<div class="sub mut">прогноз +3,5%</div></td>
-<td class="n">1 479 ₽<div class="sub mut">не ниже 1 411 ₽</div></td>
+<td class="n">1 475 ₽<div class="sub mut">не ниже 1 411 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>AWP | Duality (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">217 ₽<div class="sub mut">всего 217 ₽</div></td>
 <td>17.11 16:41</td><td>25.11 08:00</td><td class="n">247 ₽<div class="sub mut">прогноз +3,1%</div></td>
 <td class="n">239 ₽<div class="sub mut">не ниже 239 ₽</div></td>
@@ -312,13 +312,13 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">1 072 ₽<div class="sub mut">не ниже 1 072 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 292 ₽<div class="sub mut">всего 1 292 ₽</div></td>
 <td>17.11 13:18</td><td>25.11 08:00</td><td class="n">1 466 ₽<div class="sub mut">прогноз +3,0%</div></td>
-<td class="n">1 479 ₽<div class="sub mut">не ниже 1 423 ₽</div></td>
+<td class="n">1 475 ₽<div class="sub mut">не ниже 1 423 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>Desert Eagle | Eastern Enigma (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">975 ₽<div class="sub mut">всего 975 ₽</div></td>
 <td>17.11 13:06</td><td>25.11 08:00</td><td class="n">1 115 ₽<div class="sub mut">прогноз +3,8%</div></td>
 <td class="n">1 074 ₽<div class="sub mut">не ниже 1 074 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 290 ₽<div class="sub mut">всего 1 290 ₽</div></td>
 <td>17.11 12:57</td><td>25.11 08:00</td><td class="n">1 466 ₽<div class="sub mut">прогноз +3,2%</div></td>
-<td class="n">1 479 ₽<div class="sub mut">не ниже 1 420 ₽</div></td>
+<td class="n">1 475 ₽<div class="sub mut">не ниже 1 420 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>Desert Eagle | Eastern Enigma (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">977 ₽<div class="sub mut">всего 977 ₽</div></td>
 <td>17.11 12:57</td><td>25.11 08:00</td><td class="n">1 115 ₽<div class="sub mut">прогноз +3,6%</div></td>
 <td class="n">1 076 ₽<div class="sub mut">не ниже 1 076 ₽</div></td>
