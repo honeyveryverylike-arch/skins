@@ -87,7 +87,7 @@ th { font-size: .82rem; } td { font-size: .9rem; } .sub, .wear { font-size: .78r
   .market-controls { gap: 6px; } .market-controls input { width: 100%; }
   .market-controls .seg { width: 100%; } .market-controls .seg button { padding: 7px 8px; }
 }
-</style></head><body><nav class="top" data-section="bot" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html?theme=black2">Таблица</a><a href="buy.html?theme=black2">Купить</a><a href="bot.html?theme=black2" class="on" aria-current="page">Симулятор</a><a href="paper.html?theme=black2">Проверка сигналов</a><a href="timing.html?theme=black2">Время продажи</a></div><span class="timer" id="tmr" data-last="1795688400000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
+</style></head><body><nav class="top" data-section="bot" aria-label="Разделы сайта"><span class="brand"><i class="brand-mark" aria-hidden="true"></i>Skin Arb</span><div class="nav-links"><a href="table.html?theme=black2">Таблица</a><a href="buy.html?theme=black2">Купить</a><a href="bot.html?theme=black2" class="on" aria-current="page">Симулятор</a><a href="paper.html?theme=black2">Проверка сигналов</a><a href="timing.html?theme=black2">Время продажи</a></div><span class="timer" id="tmr" data-last="1795689000000" data-step="1" data-step-site="10" data-note=""><i class="dot"></i><span id="tmr-t">…</span></span>
 <script>(function(){
 const loc=location.protocol==='file:',el=document.getElementById('tmr'),tx=document.getElementById('tmr-t'),last=+el.dataset.last,step=(loc?+el.dataset.step:+(el.dataset.stepSite||el.dataset.step))*6e4,LAG=loc?25e3:3*6e4;
 // (16.11) on the public site the countdown is to the next SITE update (GitHub Pages: about 10 updates an hour at most), not to the
@@ -111,16 +111,16 @@ function tick(){const now=Date.now(),due=next+LAG;
  else{el.className='timer late';tx.textContent=note?'Замер не записан: '+note+'. Последний нормальный замер в '+hm(last):'Обновление задерживается: последний замер в '+hm(last)+'. Возможно, компьютер со сканером выключен';check()}}
 tick();setInterval(tick,1000)})();</script></nav>
 <h1>Бот: конвейер (учебный режим)</h1>
-<div class="mut">Последний обработанный замер: <b>2026-11-26 11:20</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
+<div class="mut">Последний обработанный замер: <b>2026-11-26 11:30</b> · бот запущен 12.11 11:51 · ничего не покупает по-настоящему: решения на реальных ценах, покупки и продажи — виртуальные</div>
 <div class="cards">
 <div class="card"><div class="k">Капитал по себестоимости</div><div class="v">87 159 ₽</div><div class="s">вложено 87 000 ₽ · деньги 9 983 ₽</div></div>
-<div class="card"><div class="k">Оценка портфеля по ценам выхода</div><div class="v">86 149 ₽</div><div class="s">Деньги и открытые позиции после комиссий. Цена может измениться до продажи.</div></div>
+<div class="card"><div class="k">Оценка портфеля по ценам выхода</div><div class="v">86 140 ₽</div><div class="s">Деньги и открытые позиции после комиссий. Цена может измениться до продажи.</div></div>
 <div class="card"><div class="k">Бюджет</div><div class="v">без ограничения</div><div class="s">с 17.11 — нехватка денег добавляется пополнением</div></div>
 <div class="card"><div class="k">В работе</div><div class="v">119 шт</div><div class="s">56 ждут разблокировку, 26 выставлены</div></div>
 <div class="card"><div class="k">Прибыль закрытых сделок</div><div class="v pos">159 ₽</div><div class="s">продано позиций: 13</div></div>
 </div>
 <div class="mut">Старт 12.11 11:51: 4 346 ₽ · 16.11 06:40: +10 654 ₽ (бюджет бота поднят до 15 000 ₽ по решению пользователя) · 16.11 10:14: +35 000 ₽ (бюджет бота поднят до 50 000 ₽ по решению пользователя) · без лимита (с 17.11): +37 000 ₽ пополнениями по мере нужды (30)</div>
-<div class="note">Сейчас не покупает: подходящие лоты (Aim, Lis) уже куплены, ждёт новых (26.11 11:21).</div>
+<div class="note">Сейчас не покупает: подходящие лоты (Aim, Lis) уже куплены, ждёт новых (26.11 11:31).</div>
 <h2>По неделям</h2>
 <div class="wrap"><table><thead><tr><th>Неделя с</th><th class="n">Куплено, шт</th><th class="n">На сумму</th><th class="n">Продано, шт</th><th class="n">Прибыль</th><th class="n">% к вложенному в проданное</th></tr></thead><tbody>
 <tr><td>23.11.2026</td><td class="n">45</td><td class="n">27 326 ₽</td><td class="n">20</td><td class="n pos">40,01 ₽</td><td class="n">+0,2%</td></tr><tr><td>16.11.2026</td><td class="n">93</td><td class="n">66 489 ₽</td><td class="n">7</td><td class="n pos">119 ₽</td><td class="n">+13,0%</td></tr><tr><td>09.11.2026</td><td class="n">8</td><td class="n">1 336 ₽</td><td class="n">0</td><td class="n ">—</td><td class="n">—</td></tr>
@@ -309,7 +309,7 @@ tick();setInterval(tick,1000)})();</script></nav>
 <td class="n">1 420 ₽<div class="sub mut">не ниже 1 403 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>AK-47 | Breakthrough (Battle-Scarred)<div class="sub mut">Aim.market</div></td><td class="n">2</td><td class="n">124 ₽<div class="sub mut">всего 249 ₽</div></td>
 <td>18.11 10:53</td><td>26.11 08:00</td><td class="n">141 ₽<div class="sub mut">прогноз +3,2%</div></td>
-<td class="n">143 ₽<div class="sub mut">не ниже 137 ₽</div></td>
+<td class="n">141 ₽<div class="sub mut">не ниже 137 ₽</div></td>
 <td>выставлен на MC</td><td class="n ">—</td></tr><tr><td>StatTrak™ AK-47 | Crane Flight (Battle-Scarred)<div class="sub mut">Lis-skins</div></td><td class="n">1</td><td class="n">1 278 ₽<div class="sub mut">всего 1 278 ₽</div></td>
 <td>18.11 09:15</td><td>26.11 08:00</td><td class="n">1 464 ₽<div class="sub mut">прогноз +4,0%</div></td>
 <td class="n">1 420 ₽<div class="sub mut">не ниже 1 407 ₽</div></td>
